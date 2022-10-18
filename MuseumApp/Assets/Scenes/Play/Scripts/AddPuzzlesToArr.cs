@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,25 +6,19 @@ using UnityEngine.UI;
 public class AddPuzzlesToArr : MonoBehaviour
 {
 
-    public GameObject[] places;
-    public GameObject[] puzzlePiecesunsolved;
-    Sprite[] puzzlePieces;
+   
+    public GameObject[] puzzlePiecesunsolved; // Массив несобранных пазлов, которые находятся вне формы
+    Sprite[] _puzzlePiecesSprites; // Массив для спрайтов деталек фотографии
+    static Sprite[] puzzlePiecesSprites; 
 
     private void Awake()
     {
-        puzzlePieces = Resources.LoadAll<Sprite>(Convert.ToString(UnityEngine.Random.Range(1, 3)));
+        _puzzlePiecesSprites = Resources.LoadAll<Sprite>(Convert.ToString(UnityEngine.Random.Range(1, 3))); // Наполнение массива спрайтами случайного изображения из папки Resources
+        puzzlePiecesSprites = _puzzlePiecesSprites;
 
-        for (int i = 0; i < puzzlePieces.Length; i++)
+        for (int i = 0; i < puzzlePiecesSprites.Length; i++)
         {
-            places[i].GetComponent<Image>().sprite = puzzlePieces[i]; 
-            Image tmp = places[i].GetComponent<Image>();
-            Color newColor = tmp.color;
-            newColor.a = 0;
-            tmp.color = newColor;
-        }
-        for (int i = 0; i < puzzlePieces.Length; i++)
-        {
-            puzzlePiecesunsolved[i].GetComponent<Image>().sprite = puzzlePieces[i];
+            puzzlePiecesunsolved[i].GetComponent<Image>().sprite = puzzlePiecesSprites[i]; // Присваивание каждому пазлу нужную картинку
         }
 
     }
