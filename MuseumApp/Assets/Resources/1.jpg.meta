@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Golova_0
+      name: 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 452
-        width: 341.33334
-        height: 226
+        y: 466
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c6d1a88699bb2540ab72522511a1084
-      internalID: -432403104
+      spriteID: 6a7e19852c4a84342ac7b4518e2f00ed
+      internalID: -963828114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_1
+      name: 1_1
       rect:
         serializedVersion: 2
-        x: 341
-        y: 452
-        width: 341.33334
-        height: 226
+        x: 334
+        y: 466
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98955b27b06440b4a9b5c654841f5b02
-      internalID: -1231659388
+      spriteID: e79fa0263caaf674ebf1b7ee205949e8
+      internalID: 1285731409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_2
+      name: 1_2
       rect:
         serializedVersion: 2
-        x: 682
-        y: 452
-        width: 341.33334
-        height: 226
+        x: 668
+        y: 466
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 994102d79d9f97c4881502b15e005e29
-      internalID: -9894927
+      spriteID: 8f4c4d9a42b8c85438609ccf0b8c5ced
+      internalID: -1078808589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_3
+      name: 1_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 226
-        width: 341.33334
-        height: 226
+        y: 233
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50162f78abf471a4799fe51c2659ddcf
-      internalID: 726181738
+      spriteID: b149cb8a36d03a04c8033900f4f736bb
+      internalID: 507586639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_4
+      name: 1_4
       rect:
         serializedVersion: 2
-        x: 341
-        y: 226
-        width: 341.33334
-        height: 226
+        x: 334
+        y: 233
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c947a8552affba4d9ddc0f8e8b124ab
-      internalID: -27116577
+      spriteID: 822e7d4f8b2a2734483b650276263781
+      internalID: 802796163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_5
+      name: 1_5
       rect:
         serializedVersion: 2
-        x: 682
-        y: 226
-        width: 341.33334
-        height: 226
+        x: 668
+        y: 233
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98fe004b3f44f9b4fa7f3b65a88e1583
-      internalID: -1830609945
+      spriteID: f294ad8c31b0fc341938cafc5cad106d
+      internalID: -1974506392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_6
+      name: 1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 341.33334
-        height: 226
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20b5f29538590941b0e7cbe806cb9ac
-      internalID: -2047651953
+      spriteID: d5e2017e76549ce428fe923a2ad2a83e
+      internalID: -285992490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_7
+      name: 1_7
       rect:
         serializedVersion: 2
-        x: 341
+        x: 334
         y: 0
-        width: 341.33334
-        height: 226
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2601a09394822464992cdaa526afe42d
-      internalID: -879075884
+      spriteID: bf45cdfb422553d44a74aa1975b48722
+      internalID: -1376679192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golova_8
+      name: 1_8
       rect:
         serializedVersion: 2
-        x: 682
+        x: 668
         y: 0
-        width: 341.33334
-        height: 226
+        width: 334.66666
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26df17b8f85ad444b83312159475247
-      internalID: 987860896
+      spriteID: cc2239fe655b9f64ea3e83d41e824418
+      internalID: 1508179421
       vertices: []
       indices: 
       edges: []
@@ -327,15 +327,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Golova_3: 726181738
-      Golova_2: -9894927
-      Golova_4: -27116577
-      Golova_8: 987860896
-      Golova_7: -879075884
-      Golova_6: -2047651953
-      Golova_0: -432403104
-      Golova_1: -1231659388
-      Golova_5: -1830609945
+      1_8: 1508179421
+      1_6: -285992490
+      1_1: 1285731409
+      1_0: -963828114
+      1_2: -1078808589
+      1_5: -1974506392
+      1_7: -1376679192
+      1_4: 802796163
+      1_3: 507586639
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
