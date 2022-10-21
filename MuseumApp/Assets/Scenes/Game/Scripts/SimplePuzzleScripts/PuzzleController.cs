@@ -1,51 +1,74 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PuzzleController : MonoBehaviour
 {
-    bool isMoving;
-    bool isPieceFinished;
-    Vector2 mousePosition1;
-    float startPosX, startPosY;
-    public GameObject form;
+    bool isMoving; // Происходит ли движение
+    bool isPieceFinished; // Закончена ли постановка конкретного пазла
+    Vector2 mousePosition; // Позиция мыши
+    float startPosX, startPosY; 
+    public GameObject form; // Правильное место пазла
 
-    void OnMouseDown()
+    void OnMouseDown() // Автоматически делается, когда нажата какая либо кнопка мыши
     {
         
         if (Input.GetMouseButtonDown(0))
         {
             isMoving = true;
-            mousePosition1 = Input.mousePosition;
+            mousePosition = Input.mousePosition;
 
-            startPosX = mousePosition1.x - this.transform.localPosition.x;
-            startPosY = mousePosition1.y - this.transform.localPosition.y;
+            startPosX = mousePosition.x - this.transform.localPosition.x;
+            startPosY = mousePosition.y - this.transform.localPosition.y;
         }
     }
 
-    void OnMouseUp()
+    void OnMouseUp() // Автоматически делается, когда отжата какая либо кнопка мыши
     {
         isMoving = false;
 
         
         if (Mathf.Abs(this.transform.localPosition.x - form.transform.localPosition.x) <= 40f &&
-           Mathf.Abs(this.transform.localPosition.y - form.transform.localPosition.y) <= 40f && isPieceFinished == false)
+           Mathf.Abs(this.transform.localPosition.y - form.transform.localPosition.y) <= 40f && isPieceFinished == false) // Проверяем находится ли пазл над нужным местом
         {
-            this.transform.position = new Vector2(form.transform.position.x, form.transform.position.y);
+            this.transform.position = new Vector3(form.transform.position.x, form.transform.position.y, 40);
             isPieceFinished = true;
             this.gameObject.GetComponent<Image>().raycastTarget = false;
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             this.transform.SetSiblingIndex(0);
-            //WinScript.AddElement();
+            IsWin.solvedPuzzles++;
         }
     }
 
-    private void Update()
+    bool IsGameWin()
+    {
+        if (IsWin.solvedPuzzles == 9)
+        {
+            IsWin.solvedPuzzles = 0;
+            return true;
+        }
+        else { return false; }
+    }
+
+    private void Update() // Делается всегда
     {
         if (isMoving && isPieceFinished == false)
         {
-            mousePosition1 = Input.mousePosition;
-            this.gameObject.transform.localPosition = new Vector2(mousePosition1.x - startPosX, mousePosition1.y - startPosY);
+            mousePosition = Input.mousePosition;
+            this.gameObject.transform.localPosition = new Vector2(mousePosition.x - startPosX, mousePosition.y - startPosY); // Реализация перемещения
         }
+        if (IsGameWin())
+        {
+            Win();
+        }
+    }
+
+    private void Win()
+    {
+        Debug.Log("Красавчик!");
+        var go = Instantiate(GamePrefabChanger.winPuzzleGameParticle, GamePrefabChanger.prefabPlace.transform);
+        Destroy(go, 6f);
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winDescription1);
     }
 }

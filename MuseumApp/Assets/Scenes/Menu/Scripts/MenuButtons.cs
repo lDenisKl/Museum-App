@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuButtons : MonoBehaviour
+public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут выполняться кнопками внутри сцены Menu
 {
     public void MoveToPlay() // Перемещение на игровую сцену
     {
@@ -17,5 +17,10 @@ public class MenuButtons : MonoBehaviour
     public void MoveToSettings()
     {
         // Инициализация префаба настроек
+    }
+    
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
