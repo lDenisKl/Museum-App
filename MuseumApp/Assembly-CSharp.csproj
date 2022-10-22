@@ -56,16 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\Game\15Puzzle\Scripts\AddPuzzles.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
+    <Compile Include="Assets\Scenes\Game\15Puzzle\Scripts\Puzzle15Controller.cs" />
     <Compile Include="Assets\Scenes\Game\SimplePuzzle\Scripts\IsWin.cs" />
     <Compile Include="Assets\Scenes\Game\SimplePuzzle\Scripts\PuzzleController.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Game\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\15Puzzle\Scripts\AddPuzzles.cs" />
-    <Compile Include="Assets\Scenes\Game\15Puzzle\Scripts\Puzzle15Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

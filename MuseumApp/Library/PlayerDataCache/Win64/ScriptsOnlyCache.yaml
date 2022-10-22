@@ -1,10 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AddPuzzles
     - AddPuzzlesToArr
     - GameButtons
     - GamePrefabChanger
     - MenuButtons
+    - Puzzle15Controller
     - PuzzleController
     - SceneChanger
     Unity.2D.Animation.Editor.dll:
@@ -45,6 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   serializedClasses:
@@ -67,6 +70,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -95,19 +99,28 @@ ScriptsOnlyBuild:
     methodName: MoveToPlay
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToSimplePuzzleGame
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToSimplePuzzleGame
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
     methodName: MoveToMainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToSimplePuzzleGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToSimplePuzzleGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Puzzle15Controller
+    methodName: OnClickButton
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToFifteenPuzzleGame
   sceneClasses:
     Assets/Scenes/Game/Game.unity:
     - Class: 1
@@ -135,33 +148,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1614}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 3098}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 4580}
     - Class: 114
-      Script: {instanceID: 6166}
+      Script: {instanceID: 5554}
     - Class: 114
-      Script: {instanceID: 6326}
+      Script: {instanceID: 5896}
     - Class: 114
-      Script: {instanceID: 6718}
+      Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6920}
+      Script: {instanceID: 6174}
     - Class: 114
-      Script: {instanceID: 7334}
+      Script: {instanceID: 6334}
     - Class: 114
-      Script: {instanceID: 7644}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 7904}
+      Script: {instanceID: 6928}
     - Class: 114
-      Script: {instanceID: 8658}
+      Script: {instanceID: 7342}
     - Class: 114
-      Script: {instanceID: 9390}
+      Script: {instanceID: 7652}
+    - Class: 114
+      Script: {instanceID: 7912}
+    - Class: 114
+      Script: {instanceID: 8666}
+    - Class: 114
+      Script: {instanceID: 9398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,29 +221,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1614}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2334}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 3098}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 4738}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 5072}
+      Script: {instanceID: 5076}
     - Class: 114
-      Script: {instanceID: 5504}
+      Script: {instanceID: 5508}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6718}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 6920}
+      Script: {instanceID: 6928}
     - Class: 114
-      Script: {instanceID: 7334}
+      Script: {instanceID: 7342}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,16 +280,22 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 69415240821be7986b27e72bf9609a30
     assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: 61f2059db36c32396c3d12077855592b
@@ -507,12 +532,6 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -631,6 +650,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: 
     className: SpriteShapeGeometryCache
+  - hash:
+      serializedVersion: 2
+      Hash: 8970453755299024095f46261d6c4710
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddPuzzles
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -826,6 +851,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Puzzle15Controller
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionEnter2DMessageListener
@@ -835,6 +866,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IsWin
   - hash:
       serializedVersion: 2
       Hash: 540c7057ab2d88f1b24482ac20226505
@@ -1005,7 +1042,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 5127d95cf1d8815ee69b7bfae2f7f70b
+      Hash: 69532ec1214ba7badf267400b6be948c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePrefabChanger
@@ -1225,12 +1262,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IsWin
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu/MenuScene.unity

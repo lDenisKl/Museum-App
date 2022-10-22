@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5554013188307644432}
   - component: {fileID: 5554013188307644434}
   - component: {fileID: 5554013188307644435}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: WinParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

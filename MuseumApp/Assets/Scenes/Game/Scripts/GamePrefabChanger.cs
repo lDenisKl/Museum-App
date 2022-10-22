@@ -12,6 +12,9 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
     public GameObject _simplePuzzleGamePrefab;
     public static GameObject simplePuzzleGamePrefab;
 
+    public GameObject _fifteenPuzzleGamePrefab;
+    public static GameObject fifteenPuzzleGamePrefab;
+
     public GameObject _winPuzzleGameParticle;
     public static GameObject winPuzzleGameParticle;
     
@@ -28,6 +31,7 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
     private void Awake()
     {
         // Ссылки на префабы
+        fifteenPuzzleGamePrefab = _fifteenPuzzleGamePrefab;
         menuPrefab = _menuPrefab;
         winDescription1 = _winDescription1;
         winPuzzleGameParticle = _winPuzzleGameParticle;

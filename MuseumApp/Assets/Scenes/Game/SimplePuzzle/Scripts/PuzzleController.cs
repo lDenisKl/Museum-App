@@ -57,7 +57,6 @@ public class PuzzleController : MonoBehaviour
 
         if (isMoving && isPieceFinished == false && mousePosition.x>30 && mousePosition.y>30 && mousePosition.x<1890 && mousePosition.y<1050)
         {
-            Debug.Log(mousePosition);
             this.gameObject.transform.localPosition = new Vector2(mousePosition.x - startPosX, mousePosition.y - startPosY); // Реализация перемещения
         }
 
@@ -69,9 +68,10 @@ public class PuzzleController : MonoBehaviour
 
     private void Win()
     {
+        
         Debug.Log("Красавчик!");
         var go = Instantiate(GamePrefabChanger.winPuzzleGameParticle, GamePrefabChanger.prefabPlace.transform);
-        Destroy(go, 6f);
+        //Destroy(go, 6f);
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.winDescription1);
     }
 }
