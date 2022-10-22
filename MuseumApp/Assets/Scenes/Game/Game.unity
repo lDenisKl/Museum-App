@@ -240,9 +240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameMenuPrefab: {fileID: 8594043432467186280, guid: b398a96d5aa9cdd459ddd133539d2f03, type: 3}
   _puzzleMenuPrefab: {fileID: 0}
-  _simplePuzzleGamePrefab: {fileID: 882069285913518362, guid: 28db2534224626542be2dbde0ca40aa9, type: 3}
+  _simplePuzzleGamePrefab: {fileID: 882069285913518362, guid: 109bcdfed5dcca449baa8bcae23223ba, type: 3}
   _winPuzzleGameParticle: {fileID: 5554013188307644433, guid: 0e058fd95ad670c4fa4c0ccdce9c0de9, type: 3}
   _winDescription1: {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
+  _menuPrefab: {fileID: 0}
   _prefabPlace: {fileID: 734713576}
 --- !u!114 &629706251
 MonoBehaviour:
