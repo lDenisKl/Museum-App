@@ -62,12 +62,12 @@
     <Compile Include="Assets\Scenes\Game\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
     <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\IsWin.cs" />
     <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
+    <Compile Include="Assets\Scenes\Game\MapGame\Scripts\MovePiece.cs" />
     <Compile Include="Assets\Scenes\Game\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\MapGame\Scripts\MovePiece.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

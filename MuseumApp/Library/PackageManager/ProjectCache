@@ -3058,7 +3058,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: tool
   description: 'The 2D Pixel Perfect package contains the Pixel Perfect Camera component
     which ensures your pixel art remains crisp and clear at different resolutions,
     and stable in motion.
@@ -3089,10 +3089,12 @@ m_ResolvedPackages:
     - 5.0.0
     - 5.0.1
     - 5.0.2
+    - 5.0.3
     compatible:
     - 5.0.1
     - 5.0.2
-    verified: 5.0.2
+    - 5.0.3
+    verified: 5.0.3
   dependencies: []
   resolvedDependencies: []
   keywords:
