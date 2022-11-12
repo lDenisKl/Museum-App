@@ -18,9 +18,6 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
 
     private void Awake()
     {
-        SetLoadingPicture();
-        System.Threading.Thread.Sleep(3000);
-        GameButtons.DestroyAll();
         // Ссылки на префабы
         allPrefabs = _allPrefabs;
         winPrefabs = _winPrefabs;
@@ -32,11 +29,5 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
     public static void ChangePrefab(GameObject prefab) // Метод, реализующий смену префабов внутри сцены Game
     {
             Instantiate(prefab, prefabPlace.transform, false);
-    }
-
-    public static void SetLoadingPicture()
-    {
-        ChangePrefab(allPrefabs[5]);
-        
     }
 }

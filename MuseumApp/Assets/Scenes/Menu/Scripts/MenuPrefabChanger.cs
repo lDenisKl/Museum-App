@@ -18,7 +18,7 @@ public class MenuPrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
         allPrefabs = _allPrefabs;
         prefabPlace = _prefabPlace;
 
-        Instantiate(allPrefabs[0], prefabPlace.transform, false); // По дефолту создавать префаб игрового меню при заходе на сцену Game
+        //Instantiate(allPrefabs[0], prefabPlace.transform, false); // По дефолту создавать префаб игрового меню при заходе на сцену Game
     }
 
     public static void ChangePrefab(GameObject prefab) // Метод, реализующий смену префабов внутри сцены Game

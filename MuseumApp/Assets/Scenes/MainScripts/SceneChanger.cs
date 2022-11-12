@@ -11,9 +11,20 @@ public class SceneChanger : MonoBehaviour
     {
     }
     
-    public static void MoveToAnotherScene(int sceneNum)
+    public static void MoveToAnotherScene(int sceneNum, int activeSceneNum)
     {
-        GamePrefabChanger.SetLoadingPicture();
+        switch (activeSceneNum)
+        {
+            case 0:
+                MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
+                break;
+            case 1:
+                GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[5]);
+                break;
+            case 2:
+                // Для сцены обучения смена на загрузочный префаб
+                break;
+        }
         SceneManager.LoadScene(sceneNum);
     }
 }

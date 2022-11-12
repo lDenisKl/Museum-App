@@ -39,7 +39,7 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
 
     public void MoveToMainMenu()
     {
-        SceneChanger.MoveToAnotherScene(0);
+        SceneChanger.MoveToAnotherScene(0, 1);
         Destroy(gameObject);
     }
    

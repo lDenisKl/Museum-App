@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\SceneStart.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

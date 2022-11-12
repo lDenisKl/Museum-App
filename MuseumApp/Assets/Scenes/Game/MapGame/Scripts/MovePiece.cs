@@ -29,7 +29,7 @@ public class MovePiece : MonoBehaviour
             this.gameObject.transform.localPosition = new Vector2(mousePosition.x - startPosX, mousePosition.y - startPosY); // Реализация перемещения
         }
     }
-    private void OnMouseDown()
+    private void OnMouseDown()// Автоматически делается, когда нажата какая либо кнопка мыши
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -46,8 +46,8 @@ public class MovePiece : MonoBehaviour
     {
         isMoving = false;
 
-        if (Mathf.Abs(transform.localPosition.x - form.transform.localPosition.x) <= 40f &&
-           Mathf.Abs(transform.localPosition.y - form.transform.localPosition.y) <= 40f) // Проверяем находится ли пазл над нужным местом
+        if (Mathf.Abs(transform.localPosition.x - form.transform.localPosition.x) <= 60f &&
+           Mathf.Abs(transform.localPosition.y - form.transform.localPosition.y) <= 60f) // Проверяем находится ли пазл над нужным местом
         {
 
             transform.position = new Vector3(form.transform.position.x, form.transform.position.y, 40);

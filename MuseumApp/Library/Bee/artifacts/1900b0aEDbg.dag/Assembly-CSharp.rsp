@@ -382,9 +382,11 @@
 "Assets/Scenes/Game/PuzzleGames/SimplePuzzle/Scripts/PuzzleController.cs"
 "Assets/Scenes/Game/Scripts/GameButtons.cs"
 "Assets/Scenes/Game/Scripts/GamePrefabChanger.cs"
+"Assets/Scenes/Game/Scripts/SceneStart.cs"
 "Assets/Scenes/MainScripts/SceneChanger.cs"
 "Assets/Scenes/Menu/Scripts/MenuButtons.cs"
 "Assets/Scenes/Menu/Scripts/MenuPrefabChanger.cs"
+"Assets/Scenes/Menu/Scripts/SceneStartMenu.cs"
 -langversion:9.0
 
 /deterministic
