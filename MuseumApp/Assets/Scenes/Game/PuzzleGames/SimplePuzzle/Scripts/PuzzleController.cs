@@ -5,54 +5,73 @@ using UnityEngine.UI;
 
 public class PuzzleController : MonoBehaviour
 {
-    bool isMoving; // Происходит ли движение
-    bool isPieceFinished; // Закончена ли постановка конкретного пазла
-    Vector2 mousePosition; // Позиция мыши
-    float startPosX, startPosY; 
-    public GameObject form; // Правильное место пазла
+    [Header("Правильное место пазла")]
+    public GameObject form;                   // Правильное место пазла
 
-    void OnMouseDown() // Автоматически делается, когда нажата какая либо кнопка мыши
+    private bool isMoving;                    // Происходит ли движение
+    private bool isPieceFinished;             // Закончена ли постановка конкретного пазла
+    private Vector2 offset;
+    Vector2 mousePosition;                    // Позиция мыши
+
+    static AudioClip winAudio; // Звук победы
+
+    /* VVV Получение координат курсора в камерных координатах VVV */
+    Vector2 GetMousePos() { return Camera.main.ScreenToWorldPoint(Input.mousePosition); }
+
+    private void Awake()
     {
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            isMoving = true;
-            mousePosition = Input.mousePosition;
+        winAudio = Resources.Load("Sounds/WinAudio") as AudioClip; // Загрузка звука победы из папки Resources
+    }
 
-            startPosX = mousePosition.x - this.transform.localPosition.x;
-            startPosY = mousePosition.y - this.transform.localPosition.y;
+    /* VVV Выполняется всегда VVV */
+    private void Update() 
+    {
+        if (IsGameWin()) Win();                          // Проверка на выигрыш
+        if (!isMoving) return;
+
+        mousePosition = GetMousePos();                   // Получаем координаты курсорв
+
+        if (isMoving && isPieceFinished == false )
+        {
+            transform.position = mousePosition - offset; // Реализация перемещения
         }
     }
 
-    void OnMouseUp() // Автоматически делается, когда отжата какая либо кнопка мыши
+    /* VVV Автоматически выполняется, когда нажата какая либо кнопка мыши VVV */
+    void OnMouseDown()
+    {
+        isMoving = true;
+        offset = GetMousePos() - (Vector2)transform.position;
+    }
+
+    /* VVV Автоматически выполняется, когда отжата какая либо кнопка мыши VVV */
+    void OnMouseUp() 
     {
         isMoving = false;
 
-        
-        if (Mathf.Abs(this.transform.localPosition.x - form.transform.localPosition.x) <= 40f &&
-           Mathf.Abs(this.transform.localPosition.y - form.transform.localPosition.y) <= 40f && isPieceFinished == false) // Проверяем находится ли пазл над нужным местом
+        if (Mathf.Abs(transform.localPosition.x - form.transform.localPosition.x) <= 40f &&
+           Mathf.Abs(transform.localPosition.y - form.transform.localPosition.y) <= 40f && isPieceFinished == false) // Проверяем находится ли пазл над нужным местом
         {
-            
-            if(IsWin.solvedPuzzles == 8)
+            if(IsWin.solvedPuzzles == 8) // 9 пазл ставится со звуком победы 
             {
-                gameObject.GetComponent<AudioSource>().clip = AddPuzzlesToArr.winAudio;
+                gameObject.GetComponent<AudioSource>().clip = winAudio;
                 gameObject.GetComponent<AudioSource>().Play();
             }
-            else
+            else // Первые 8 пазлов при постановке проигрывают звук постановки
             {
                 gameObject.GetComponent<AudioSource>().Play();
             }
-            
-            transform.position = new Vector3(form.transform.position.x, form.transform.position.y, 40);
+
             isPieceFinished = true;
+            transform.position = new Vector3(form.transform.position.x, form.transform.position.y, 40); // "Примагничиваем" пазл на своё место
             gameObject.GetComponent<Image>().raycastTarget = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             transform.SetSiblingIndex(0);
-            IsWin.solvedPuzzles++;
-            Debug.Log(IsWin.solvedPuzzles);
+            IsWin.solvedPuzzles++; // Изменяем счётчик собранных пазлов
         }
     }
 
+    /* VVV Функция, проверяющая собран ли пазл VVV */
     bool IsGameWin()
     {
         if (IsWin.solvedPuzzles == 9)
@@ -63,27 +82,12 @@ public class PuzzleController : MonoBehaviour
         else { return false; }
     }
 
-    private void Update() // Делается всегда
-    {
-        mousePosition = Input.mousePosition;
 
-        if (isMoving && isPieceFinished == false && mousePosition.x>30 && mousePosition.y>30 && mousePosition.x<1890 && mousePosition.y<1050)
-        {
-            this.gameObject.transform.localPosition = new Vector2(mousePosition.x - startPosX, mousePosition.y - startPosY); // Реализация перемещения
-        }
-
-        if (IsGameWin())
-        {
-            Win();
-        }
-    }
-
+    /* VVV Функция, используемая при выигрыше VVV */
     private void Win()
     {
-        
-        Debug.Log("Красавчик!");
-        var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform);
-        //Destroy(go, 6f);
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[0]);
+        var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform); // Инизиализация победного эффекта
+        Destroy(go, 3f);                                                                                // Уничтожение партиклов спустя 3 секунды
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[0]);                                // Инизиализация победного описания
     }
 }
