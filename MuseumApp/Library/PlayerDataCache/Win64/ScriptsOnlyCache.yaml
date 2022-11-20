@@ -1,14 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AddPictureTip
     - AddPuzzles
     - AddPuzzlesToArr
     - GameButtons
     - GamePrefabChanger
     - MenuButtons
+    - MenuPrefabChanger
+    - MovePiece
     - Puzzle15Controller
     - PuzzleController
     - SceneChanger
+    - SceneStart
+    - SceneStartMenu
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -49,7 +54,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -83,8 +91,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuButtons
+    methodName: MoveToStudy
   - assembly: Assembly-CSharp
     fullTypeName: MenuButtons
     methodName: MoveToSettings
@@ -93,34 +105,40 @@ ScriptsOnlyBuild:
     methodName: Quit
   - assembly: Assembly-CSharp
     fullTypeName: MenuButtons
-    methodName: MoveToStudy
-  - assembly: Assembly-CSharp
-    fullTypeName: MenuButtons
     methodName: MoveToPlay
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: MoveToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToSimplePuzzleGame
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToGameMenu
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToSimplePuzzleGame
+    methodName: BackTo
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToGameMenu
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: BackTo
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: BackTo
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: Puzzle15Controller
     methodName: OnClickButton
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToFifteenPuzzleGame
   sceneClasses:
     Assets/Scenes/Game/Game.unity:
     - Class: 1
@@ -141,6 +159,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -152,35 +174,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 4580}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 3462}
     - Class: 114
-      Script: {instanceID: 5896}
+      Script: {instanceID: 4584}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 4722}
     - Class: 114
-      Script: {instanceID: 6174}
+      Script: {instanceID: 5558}
     - Class: 114
-      Script: {instanceID: 6334}
+      Script: {instanceID: 5900}
     - Class: 114
-      Script: {instanceID: 6726}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6928}
+      Script: {instanceID: 6178}
     - Class: 114
-      Script: {instanceID: 7342}
+      Script: {instanceID: 6226}
     - Class: 114
-      Script: {instanceID: 7652}
+      Script: {instanceID: 6340}
     - Class: 114
-      Script: {instanceID: 7912}
+      Script: {instanceID: 6732}
     - Class: 114
-      Script: {instanceID: 8666}
+      Script: {instanceID: 6934}
     - Class: 114
-      Script: {instanceID: 9398}
+      Script: {instanceID: 7038}
+    - Class: 114
+      Script: {instanceID: 7350}
+    - Class: 114
+      Script: {instanceID: 7660}
+    - Class: 114
+      Script: {instanceID: 7920}
+    - Class: 114
+      Script: {instanceID: 8674}
+    - Class: 114
+      Script: {instanceID: 9406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -201,7 +233,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Menu/MenuScene.unity:
+    Assets/Scenes/Menu/Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -218,32 +250,40 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1568}
-    - Class: 114
       Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 4742}
+      Script: {instanceID: 3462}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 4830}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 6726}
+      Script: {instanceID: 5512}
     - Class: 114
-      Script: {instanceID: 6928}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 7342}
+      Script: {instanceID: 6732}
+    - Class: 114
+      Script: {instanceID: 6934}
+    - Class: 114
+      Script: {instanceID: 7350}
+    - Class: 114
+      Script: {instanceID: 7892}
+    - Class: 114
+      Script: {instanceID: 8856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -260,7 +300,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Study/StudyScene.unity:
+    Assets/Scenes/Study/Study.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -280,16 +320,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 040dd48e3a027d5424519a5fa2009df4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -386,6 +426,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: CinemachinePixelPerfect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneStart
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -532,6 +578,12 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -652,7 +704,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 8970453755299024095f46261d6c4710
+      Hash: 110d48cf5ecaf5697c5d84a7a5d19de2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzles
@@ -712,7 +764,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreak2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ce967e832eac6be9198eb4edba713f9d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuPrefabChanger
@@ -892,6 +944,12 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 540c7057ab2d88f1b24482ac20226505
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovePiece
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -944,6 +1002,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 87e8798511b5fc2e9b5770bdf9423c74
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddPictureTip
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1042,7 +1106,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 69532ec1214ba7badf267400b6be948c
+      Hash: 351af5e3f3e6eec3eb1432f616ab30f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePrefabChanger
@@ -1156,16 +1220,16 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 5a36a85d9958b3e1a8e5f14187e233eb
+      Hash: 915e027f77e0e6e065ce0e008feb76d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzlesToArr
   - hash:
       serializedVersion: 2
-      Hash: 040dd48e3a027d5424519a5fa2009df4
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: ScrollRect
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneStartMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1264,7 +1328,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Menu/MenuScene.unity
+  - Assets/Scenes/Menu/Menu.unity
   - Assets/Scenes/Game/Game.unity
-  - Assets/Scenes/Study/StudyScene.unity
-  playerPath: C:/Users/user/Desktop/1/MuseumApp.exe
+  - Assets/Scenes/Study/Study.unity
+  playerPath: D:/Museum Proj/MuseumApp.exe

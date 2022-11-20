@@ -57,17 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Game\Scripts\SceneStart.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\IsWin.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
-    <Compile Include="Assets\Scenes\Game\MapGame\Scripts\MovePiece.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\IsWin.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MovePiece.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
-    <Compile Include="Assets\Scenes\Game\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
   </ItemGroup>

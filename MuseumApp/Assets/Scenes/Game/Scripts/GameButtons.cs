@@ -15,12 +15,6 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
         DestroyAll();
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[number]);
     }
-
-    public void BackTo(int number)
-    {
-        DestroyAll();
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[number]);
-    }
     
     public void PlayAgain()
     {

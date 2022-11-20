@@ -178,7 +178,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -243,7 +243,7 @@ MonoBehaviour:
   - {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
   _allPrefabs:
   - {fileID: 8594043432467186280, guid: b398a96d5aa9cdd459ddd133539d2f03, type: 3}
-  - {fileID: 3390644752948371276, guid: 2e7d4dfb2b0db454f80f836fb39659eb, type: 3}
+  - {fileID: 8594043432467186280, guid: e5c0212576b33c64eb1a5d05e086be05, type: 3}
   - {fileID: 882069285913518362, guid: 28db2534224626542be2dbde0ca40aa9, type: 3}
   - {fileID: 882069285913518362, guid: 109bcdfed5dcca449baa8bcae23223ba, type: 3}
   - {fileID: 5554013188307644433, guid: 0e058fd95ad670c4fa4c0ccdce9c0de9, type: 3}
