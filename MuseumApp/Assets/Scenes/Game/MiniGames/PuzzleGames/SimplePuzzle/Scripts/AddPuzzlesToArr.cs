@@ -16,7 +16,7 @@ public class AddPuzzlesToArr : MonoBehaviour
 
     private void Awake()
     {
-        _puzzlePiecesSprites = Resources.LoadAll<Sprite>("7");   //Convert.ToString(UnityEngine.Random.Range(1, 11))); // Наполнение массива спрайтами случайного изображения из папки Resources
+        _puzzlePiecesSprites = Resources.LoadAll<Sprite>("ForSimplePuzzles/" + Convert.ToString(UnityEngine.Random.Range(1, 14))); // Наполнение массива спрайтами случайного изображения из папки Resources
 
         for(int i = 0; i < _puzzlePiecesSprites.Length - 1; i++) // Наполнение статического массива деталями фотографии для пазлов без последнего(полностью фотография)
         {
