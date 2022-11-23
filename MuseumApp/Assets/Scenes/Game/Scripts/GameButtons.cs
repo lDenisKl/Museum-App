@@ -12,6 +12,7 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
 
     public void MoveToAnotherPrefab(int number)
     {
+        IsWin.solvedPuzzles = 0;
         DestroyAll();
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[number]);
     }
@@ -20,6 +21,7 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
     {
         if (GameObject.Find("SimplePuzzleGame(Clone)"))
         {
+            IsWin.solvedPuzzles = 0;
             DestroyAll();
             GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[2]);
         }

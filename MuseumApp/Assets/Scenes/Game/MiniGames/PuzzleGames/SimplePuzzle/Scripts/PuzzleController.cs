@@ -88,6 +88,6 @@ public class PuzzleController : MonoBehaviour
     {
         var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform); // Инизиализация победного эффекта
         Destroy(go, 3f);                                                                                // Уничтожение партиклов спустя 3 секунды
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[0]);                                // Инизиализация победного описания
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[AddPuzzlesToArr.activePuzzle - 1]);     // Инизиализация победного описания
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут выполняться кнопками внутри сцены Menu
@@ -15,7 +13,6 @@ public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут вып
     {
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
         SceneChanger.MoveToAnotherScene(1, 0);
-        
     }
 
     public void MoveToAnotherPrefab(int number)
@@ -35,6 +32,18 @@ public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут вып
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[1]);
     }
     
+    public void switchTips()
+    {
+        if (SettingsController.tipToggle.isOn)
+        {
+            SettingsController.isTipOn = false;
+        }
+        else
+        {
+            SettingsController.isTipOn = true;
+        }
+    }
+
     public void Quit()
     {
         Application.Quit();

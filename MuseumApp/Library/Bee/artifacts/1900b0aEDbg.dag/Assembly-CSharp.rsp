@@ -387,6 +387,7 @@
 "Assets/Scenes/Menu/Scripts/MenuButtons.cs"
 "Assets/Scenes/Menu/Scripts/MenuPrefabChanger.cs"
 "Assets/Scenes/Menu/Scripts/SceneStartMenu.cs"
+"Assets/Scenes/Menu/Scripts/SettingsController.cs"
 -langversion:9.0
 
 /deterministic

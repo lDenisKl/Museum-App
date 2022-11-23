@@ -12,11 +12,13 @@ public class AddPuzzlesToArr : MonoBehaviour
 
     private Sprite[] _puzzlePiecesSprites;                        // Начальный массив спрайтов деталек фотографии
     private static Sprite[] puzzlePiecesSprites = new Sprite[9];  // Массив спрайтов деталек фотографий для использования
+    public static int activePuzzle;
    
 
     private void Awake()
     {
-        _puzzlePiecesSprites = Resources.LoadAll<Sprite>("ForSimplePuzzles/" + Convert.ToString(UnityEngine.Random.Range(1, 14))); // Наполнение массива спрайтами случайного изображения из папки Resources
+        activePuzzle = UnityEngine.Random.Range(1, 14);
+        _puzzlePiecesSprites = Resources.LoadAll<Sprite>("ForSimplePuzzles/" + Convert.ToString(activePuzzle)); // Наполнение массива спрайтами случайного изображения из папки Resources
 
         for(int i = 0; i < _puzzlePiecesSprites.Length - 1; i++) // Наполнение статического массива деталями фотографии для пазлов без последнего(полностью фотография)
         {
@@ -26,7 +28,11 @@ public class AddPuzzlesToArr : MonoBehaviour
 
         for (int i = 0; i < puzzlePiecesSprites.Length; i++)
         {
-            puzzlePiecessolved[i].GetComponent<Image>().sprite = puzzlePiecesSprites[i]; // Присваивание каждому пазлу нужной картинку
+            if (SettingsController.isTipOn)
+            {
+                puzzlePiecessolved[i].GetComponent<Image>().sprite = puzzlePiecesSprites[i]; // Присваивание каждому пазлу нужной картинку(Подсказки)
+            }
+
             puzzlePiecesunsolved[i].GetComponent<Image>().sprite = puzzlePiecesSprites[i]; // Присваивание каждому пазлу нужной картинку
         }
 
