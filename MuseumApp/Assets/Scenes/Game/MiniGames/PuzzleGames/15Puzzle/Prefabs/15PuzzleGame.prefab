@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 6706974237296227414}
   - component: {fileID: 9171541478468415547}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,10 +127,10 @@ RectTransform:
   m_Father: {fileID: 882069285913518361}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8417038}
-  m_AnchorMax: {x: 0.091000006, y: 1}
-  m_AnchoredPosition: {x: 2.3590088, y: -6.90271}
-  m_SizeDelta: {x: -29.282001, y: -26.1946}
+  m_AnchorMin: {x: 0.018250002, y: 0.8214445}
+  m_AnchorMax: {x: 0.100375, y: 0.96400005}
+  m_AnchoredPosition: {x: -1.5, y: 0.5}
+  m_SizeDelta: {x: -12.2820015, y: -9.194599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1637414549380794205
 CanvasRenderer:
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0e3b0f8daf7aa4c9fa55c2b46d5f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pic: {fileID: 1097075955263456007, guid: 7011ee51a2fea604aa54abea66692827, type: 3}
+  tipPic: {fileID: 6289970657056622710}
 --- !u!114 &6034365988204319849
 MonoBehaviour:
   m_ObjectHideFlags: 0

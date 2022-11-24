@@ -3,13 +3,18 @@ using UnityEngine.UI;
 
 public class AddPictureTip : MonoBehaviour
 {
-    public GameObject pic;
+    public GameObject tipPic;
     private void Awake()
     {
-        for (int j = 0; j < 16; j++)
+        if (SettingsController.isTipOn)
         {
-            var go = Instantiate(pic, AddPuzzles.tipImage.transform, false);
-            go.GetComponent<Image>().sprite = AddPuzzles.puzzlePiecesSprites[j];
+            tipPic.active = true;
+            tipPic.GetComponent<Image>().sprite = AddPuzzles.puzzlePiecesSprites[16];
         }
+        else
+        {
+            tipPic.active = false;
+        }
+        
     }
 }

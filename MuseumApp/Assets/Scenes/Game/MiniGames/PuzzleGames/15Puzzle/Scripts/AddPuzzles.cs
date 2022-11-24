@@ -6,8 +6,10 @@ public class AddPuzzles : MonoBehaviour
 {
     public GameObject[] _puzzleButtons; // Массив для деталек
     public static GameObject[] puzzleButtons;
+
     Sprite[] _puzzlePiecesSprites; // Массив для спрайтов деталек фотографии
     public static Sprite[] puzzlePiecesSprites;
+
     public static GameObject[] puzzleButtonsSolved;
     public Transform puzzlePlace;
     public GameObject button;

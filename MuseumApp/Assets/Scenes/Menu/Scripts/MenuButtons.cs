@@ -32,16 +32,26 @@ public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут вып
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[1]);
     }
     
-    public void switchTips()
+    public void SwitchTips()
     {
-        if (SettingsController.tipToggle.isOn)
+        
+        if (SettingsController.tipToggle1.isOn)
         {
             SettingsController.isTipOn = false;
+            PlayerPrefs.SetInt("tip", 0);
         }
         else
         {
             SettingsController.isTipOn = true;
+            PlayerPrefs.SetInt("tip", 1);
         }
+    }
+
+    public void ControllVolume()
+    {
+        SettingsController.volume = SettingsController.volumeSlider.value;
+        AudioListener.volume = SettingsController.volume;
+        PlayerPrefs.SetFloat("volume", SettingsController.volume);
     }
 
     public void Quit()
