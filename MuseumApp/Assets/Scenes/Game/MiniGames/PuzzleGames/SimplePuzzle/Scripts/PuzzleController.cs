@@ -72,7 +72,7 @@ public class PuzzleController : MonoBehaviour
     }
 
     /* VVV ‘ункци€, провер€юща€ собран ли пазл VVV */
-    bool IsGameWin()
+    private bool IsGameWin()
     {
         if (IsWin.solvedPuzzles == 9)
         {

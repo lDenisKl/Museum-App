@@ -57,13 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Game\Scripts\SceneStart.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\AddPuzzlesToArray.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\IsMapWin.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\IsWin.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
-    <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MovePiece.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MapPuzzleController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
