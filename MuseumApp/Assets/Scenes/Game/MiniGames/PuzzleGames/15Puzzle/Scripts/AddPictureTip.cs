@@ -9,7 +9,7 @@ public class AddPictureTip : MonoBehaviour
         if (SettingsController.isTipOn)
         {
             tipPic.active = true;
-            tipPic.GetComponent<Image>().sprite = AddPuzzles.puzzlePiecesSprites[16];
+            tipPic.GetComponent<Image>().sprite = AddPuzzles.puzzlePiecesSprites[9];
         }
         else
         {

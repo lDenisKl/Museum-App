@@ -9,49 +9,49 @@ public class Puzzle15Controller : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 80; i++) // Перемешивание рандомными нажатиями
+        for (int i = 0; i < 30; i++) // Shuffling
         {
             ToShuffle();
         }
-        gameObject.GetComponent<AudioSource>().clip = Resources.Load("Sounds/PuzzleAudio") as AudioClip; // Получение звука клика
+        gameObject.GetComponent<AudioSource>().clip = Resources.Load("Sounds/PuzzleAudio") as AudioClip; // Getting puzzle audio
     }
-    private void GameLogic() // Реализация механики пятнашек
+    private void GameLogic() // Method with Nineteens logic
     {
         if (index > 0 && AddPuzzles.puzzleButtons[index - 1].GetComponent<Image>().sprite == null &&
-            index != 12 && index != 8 && index != 4)
+            index != 3 && index != 6)
         {
             AddPuzzles.puzzleButtons[index - 1].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
             AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite = null;
             gameObject.GetComponent<AudioSource>().Play();
         }
-        else if (index < 15 && AddPuzzles.puzzleButtons[index + 1].GetComponent<Image>().sprite == null &&
-            index != 11 && index != 3 && index != 7)
+        else if (index < 8 && AddPuzzles.puzzleButtons[index + 1].GetComponent<Image>().sprite == null &&
+            index != 2 && index != 5)
         {
             AddPuzzles.puzzleButtons[index + 1].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
             AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite = null;
             gameObject.GetComponent<AudioSource>().Play();
         }
-        else if (index > 3 && AddPuzzles.puzzleButtons[index - 4].GetComponent<Image>().sprite == null)
+        else if (index > 2 && AddPuzzles.puzzleButtons[index - 3].GetComponent<Image>().sprite == null)
         {
-            AddPuzzles.puzzleButtons[index - 4].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
+            AddPuzzles.puzzleButtons[index - 3].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
             AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite = null;
             gameObject.GetComponent<AudioSource>().Play();
         }
-        else if (index < 12 && AddPuzzles.puzzleButtons[index + 4].GetComponent<Image>().sprite == null)
+        else if (index < 6 && AddPuzzles.puzzleButtons[index + 3].GetComponent<Image>().sprite == null)
         {
-            AddPuzzles.puzzleButtons[index + 4].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
+            AddPuzzles.puzzleButtons[index + 3].GetComponent<Image>().sprite = AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite;
             AddPuzzles.puzzleButtons[index].GetComponent<Image>().sprite = null;
             gameObject.GetComponent<AudioSource>().Play();
         }
     }
-    public void OnClickButton() // Метод, вызываемый нажатием любой кнопки
+    public void OnClickButton() // OnClick
     {
         index = FindIndex();
         GameLogic();
         
-        if (IsWin()) Win(); // Проверка на выигрыш
+        if (IsWin()) Win();
     }
-    public void ToShuffle() // Перемешивание рандомными нажатиями
+    public void ToShuffle() // Shuffle method
     {
         index = FindIndexRand();
         GameLogic();
@@ -63,13 +63,13 @@ public class Puzzle15Controller : MonoBehaviour
     }
     private int FindIndexRand()
     {
-        return Array.IndexOf(AddPuzzles.puzzleButtons, AddPuzzles.puzzleButtons[rnd.Next(0,16)]);
+        return Array.IndexOf(AddPuzzles.puzzleButtons, AddPuzzles.puzzleButtons[rnd.Next(0,9)]);
     }
 
-    private bool IsWin() // Метод проверки на выигрыш
+    private bool IsWin() // Check if win
     {
         int counter = 0;
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 8; i++)
         {
             if (AddPuzzles.puzzleButtons[i].GetComponent<Image>().sprite == AddPuzzles.puzzlePiecesSprites[i])
             {
@@ -77,20 +77,20 @@ public class Puzzle15Controller : MonoBehaviour
             }
             else { break; }
         }
-        if (counter == 15)
+        if (counter == 8)
         {
             return true;
         }
         else { return false; }
     }
 
-    private void Win()
+    private void Win() // Actions on win
     {
         gameObject.GetComponent<AudioSource>().clip = AddPuzzles.winAudio;
         gameObject.GetComponent<AudioSource>().Play();
         var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform);
-        Destroy(go, 6f);
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[0]);
+        Destroy(go, 3f);
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.fifteenWinPrefabs[AddPuzzles.activePuzzle - 1]);
     }
 
 }

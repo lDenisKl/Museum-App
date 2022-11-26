@@ -517,16 +517,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _puzzlePiecesSprites: []
+  _tipImage: {fileID: 6289970657056622710}
   puzzlePlace: {fileID: 987983677436375563}
   button: {fileID: 1097075955263456007, guid: 9b97938e61ca3804eb0adbb9cdc9989e, type: 3}
-  _tipImage: {fileID: 6289970657056622710}
 --- !u!114 &3175576895981927072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +541,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250.25, y: 250.25}
+  m_CellSize: {x: 333.73, y: 334.5}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 3
