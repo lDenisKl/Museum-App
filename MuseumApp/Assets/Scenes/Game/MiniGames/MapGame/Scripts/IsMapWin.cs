@@ -8,5 +8,11 @@ public class IsMapWin : MonoBehaviour
     {
         solvedMapPuzzles = 0;
     }
-
+    private void Update()
+    {
+        if (MapPuzzleController.IsGameWin())
+        {
+            MapPuzzleController.Win();
+        }
+    }
 }

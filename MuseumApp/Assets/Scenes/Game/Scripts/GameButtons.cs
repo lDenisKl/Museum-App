@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут выполняться кнопками
+public class GameButtons : MonoBehaviour
 {
     public static void DestroyAll()
     {
@@ -17,6 +17,12 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
         DestroyAll();
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[number]);
     }
+
+    public void MoveToMapPuzzle()
+    {
+        DestroyAll();
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.mapPuzzlePrefabs[Random.Range(0, 2)]);
+    }
     
     public void PlayAgain()
     {
@@ -31,10 +37,9 @@ public class GameButtons : MonoBehaviour // Скрипт с методами, которые будут вып
             DestroyAll();
             GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[3]);
         }
-        else if(GameObject.Find("MapScene(Clone)"))
+        else
         {
-            DestroyAll();
-            GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[6]);
+            MoveToMapPuzzle();
         }
         
     }

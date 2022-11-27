@@ -127,10 +127,10 @@ RectTransform:
   m_Father: {fileID: 882069285913518361}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.018250002, y: 0.8214445}
-  m_AnchorMax: {x: 0.100375, y: 0.96400005}
-  m_AnchoredPosition: {x: -1.5, y: 0.5}
-  m_SizeDelta: {x: -12.2820015, y: -9.194599}
+  m_AnchorMin: {x: 0.026479168, y: 0.832}
+  m_AnchorMax: {x: 0.106000006, y: 0.96900004}
+  m_AnchoredPosition: {x: -1.5999756, y: 0}
+  m_SizeDelta: {x: -7.2820015, y: -3.1945992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1637414549380794205
 CanvasRenderer:
@@ -162,7 +162,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 892194e734203014a9ab6d92d262e310, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -427,7 +427,6 @@ GameObject:
   m_Component:
   - component: {fileID: 987983677436375563}
   - component: {fileID: 4565193978417677113}
-  - component: {fileID: 1930539172863583103}
   - component: {fileID: 4718128121910663528}
   - component: {fileID: 3175576895981927072}
   m_Layer: 5
@@ -452,10 +451,10 @@ RectTransform:
   m_Father: {fileID: 882069285913518361}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.13781251, y: 0.031703703}
-  m_AnchorMax: {x: 0.669, y: 0.9761852}
-  m_AnchoredPosition: {x: -1.5, y: -1.5}
-  m_SizeDelta: {x: -18.5, y: -19}
+  m_AnchorMin: {x: 0.40570834, y: 0.5}
+  m_AnchorMax: {x: 0.40570834, y: 0.5}
+  m_AnchoredPosition: {x: -4.5, y: 2}
+  m_SizeDelta: {x: 912.7118, y: 997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4565193978417677113
 CanvasRenderer:
@@ -465,36 +464,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8921816430335993944}
   m_CullTransparentMesh: 1
---- !u!114 &1930539172863583103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8921816430335993944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &4718128121910663528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +490,7 @@ MonoBehaviour:
   _tipImage: {fileID: 6289970657056622710}
   puzzlePlace: {fileID: 987983677436375563}
   button: {fileID: 1097075955263456007, guid: 9b97938e61ca3804eb0adbb9cdc9989e, type: 3}
+  puzzlePhotosAmount: 5
 --- !u!114 &3175576895981927072
 MonoBehaviour:
   m_ObjectHideFlags: 0

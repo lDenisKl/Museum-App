@@ -4,16 +4,19 @@ ScriptsOnlyBuild:
     - AddPictureTip
     - AddPuzzles
     - AddPuzzlesToArr
+    - AddPuzzlesToArray
     - GameButtons
     - GamePrefabChanger
+    - IsMapWin
+    - MapPuzzleController
     - MenuButtons
     - MenuPrefabChanger
-    - MovePiece
     - Puzzle15Controller
     - PuzzleController
     - SceneChanger
     - SceneStart
     - SceneStartMenu
+    - SettingsController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -56,7 +59,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.ToggleGroup
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Unity.TextMeshPro:
@@ -92,11 +98,22 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: MenuButtons
-    methodName: MoveToStudy
+    methodName: SwitchTips
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuButtons
+    methodName: SwitchTips
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuButtons
+    methodName: ControllVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuButtons
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: MenuButtons
     methodName: MoveToSettings
@@ -108,37 +125,151 @@ ScriptsOnlyBuild:
     methodName: MoveToPlay
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: MoveToMainMenu
+    methodName: PlayAgain
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: BackTo
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: BackTo
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: PlayAgain
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
-    methodName: BackTo
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToMapPuzzle
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: MoveToMainMenu
   - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
     fullTypeName: Puzzle15Controller
     methodName: OnClickButton
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
   sceneClasses:
     Assets/Scenes/Game/Game.unity:
     - Class: 1
@@ -174,45 +305,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3390}
     - Class: 114
-      Script: {instanceID: 4584}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 3582}
     - Class: 114
-      Script: {instanceID: 5558}
+      Script: {instanceID: 4590}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5994}
+      Script: {instanceID: 5564}
     - Class: 114
-      Script: {instanceID: 6178}
+      Script: {instanceID: 5904}
     - Class: 114
-      Script: {instanceID: 6226}
+      Script: {instanceID: 5998}
     - Class: 114
-      Script: {instanceID: 6340}
+      Script: {instanceID: 6182}
     - Class: 114
-      Script: {instanceID: 6732}
+      Script: {instanceID: 6230}
     - Class: 114
-      Script: {instanceID: 6934}
+      Script: {instanceID: 6346}
     - Class: 114
-      Script: {instanceID: 7038}
+      Script: {instanceID: 6738}
     - Class: 114
-      Script: {instanceID: 7350}
+      Script: {instanceID: 6940}
     - Class: 114
-      Script: {instanceID: 7660}
+      Script: {instanceID: 7044}
     - Class: 114
-      Script: {instanceID: 7920}
+      Script: {instanceID: 7356}
     - Class: 114
-      Script: {instanceID: 8674}
+      Script: {instanceID: 7666}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 7926}
+    - Class: 114
+      Script: {instanceID: 8680}
+    - Class: 114
+      Script: {instanceID: 9412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -257,33 +392,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2338}
+      Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3462}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 4746}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 4830}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 5080}
+      Script: {instanceID: 4752}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 4836}
     - Class: 114
-      Script: {instanceID: 5994}
+      Script: {instanceID: 5086}
     - Class: 114
-      Script: {instanceID: 6732}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 6934}
+      Script: {instanceID: 5888}
     - Class: 114
-      Script: {instanceID: 7350}
+      Script: {instanceID: 5998}
     - Class: 114
-      Script: {instanceID: 7892}
+      Script: {instanceID: 6272}
     - Class: 114
-      Script: {instanceID: 8856}
+      Script: {instanceID: 6346}
+    - Class: 114
+      Script: {instanceID: 6738}
+    - Class: 114
+      Script: {instanceID: 6940}
+    - Class: 114
+      Script: {instanceID: 7356}
+    - Class: 114
+      Script: {instanceID: 7898}
+    - Class: 114
+      Script: {instanceID: 8862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -330,6 +475,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -566,6 +717,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 8beb9d195da321c7e4ba28207da9e42f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddPuzzlesToArray
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -594,6 +751,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IsMapWin
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -704,7 +867,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 110d48cf5ecaf5697c5d84a7a5d19de2
+      Hash: 2a206bf3516040e8a6ccfae6d8836841
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzles
@@ -866,12 +1029,6 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: bcaee4c2a83047257b5f47d6ed264b75
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
-  - hash:
-      serializedVersion: 2
       Hash: 3b3bf14021899a113dbb5c9e4f0d86ad
     assemblyName: Unity.2D.Tilemap.Extras.dll
     namespaceName: UnityEngine.Tilemaps
@@ -947,7 +1104,7 @@ ScriptsOnlyBuild:
       Hash: 540c7057ab2d88f1b24482ac20226505
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MovePiece
+    className: MapPuzzleController
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -960,6 +1117,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinUpdateHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 3d1da01030f6a2ef5c8b331425e27d35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1004,7 +1167,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 87e8798511b5fc2e9b5770bdf9423c74
+      Hash: c56b15d48f0a922c47afcd78a763ab17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPictureTip
@@ -1106,7 +1269,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 351af5e3f3e6eec3eb1432f616ab30f5
+      Hash: 76a86c834598ea6f23ee1c96dca8d018
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePrefabChanger
@@ -1220,7 +1383,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 915e027f77e0e6e065ce0e008feb76d5
+      Hash: 8bd6600b496dcdb5b59c90678481da56
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzlesToArr
@@ -1331,4 +1494,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu/Menu.unity
   - Assets/Scenes/Game/Game.unity
   - Assets/Scenes/Study/Study.unity
-  playerPath: D:/Museum Proj/MuseumApp.exe
+  playerPath: D:/museum/MuseumApp.exe

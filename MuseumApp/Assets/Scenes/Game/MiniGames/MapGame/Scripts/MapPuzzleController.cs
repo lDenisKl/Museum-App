@@ -31,10 +31,10 @@ public class MapPuzzleController : MonoBehaviour
     private void Update()
     {
 
-        if (IsGameWin()) 
-        { 
-            Win(); 
-        }                          // Проверка на выигрыш
+        //if (IsGameWin()) 
+        //{ 
+        //    Win(); 
+        //}                          // Проверка на выигрыш
         if (!isMoving) return;
 
         mousePosition = GetMousePos();                   // Получаем координаты курсорв
@@ -71,13 +71,14 @@ public class MapPuzzleController : MonoBehaviour
             }
 
             AddPuzzlesToArray.puzzlePiecessolved[Array.IndexOf(AddPuzzlesToArray.puzzlePiecesunsolved, gameObject)].GetComponent<Image>().sprite = gameObject.GetComponent<Image>().sprite;
-            transform.localPosition = new Vector2(-999, -999);
-            IsMapWin.solvedMapPuzzles++; // Изменяем счётчик собранных пазлов
+            
+            transform.position = new Vector2(-999, -999);
+            IsMapWin.solvedMapPuzzles++;
         }
     }
 
     /* VVV Функция, проверяющая собран ли пазл VVV */
-    private bool IsGameWin()
+    public static bool IsGameWin()
     {
         if (IsMapWin.solvedMapPuzzles == 4)
         {
@@ -89,10 +90,10 @@ public class MapPuzzleController : MonoBehaviour
 
 
     /* VVV Функция, используемая при выигрыше VVV */
-    private void Win()
+    public static void Win()
     {
         var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform); // Инизиализация победного эффекта
         Destroy(go, 3f);                                                                                // Уничтожение партиклов спустя 3 секунды
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[13]);     // Инизиализация победного описания
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.mapWinPrefabs[0]);     // Инизиализация победного описания
     }
 }

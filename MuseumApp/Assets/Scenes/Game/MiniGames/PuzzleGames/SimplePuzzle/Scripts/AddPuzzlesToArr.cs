@@ -16,11 +16,12 @@ public class AddPuzzlesToArr : MonoBehaviour
     private static Sprite[] puzzlePiecesSprites = new Sprite[9];
 
     public static int activePuzzle;
+    public int puzzlePhotosAmount;
    
 
     private void Awake()
     {
-        activePuzzle = UnityEngine.Random.Range(1, 14);
+        activePuzzle = UnityEngine.Random.Range(1, puzzlePhotosAmount + 1);
         _puzzlePiecesSprites = Resources.LoadAll<Sprite>("ForSimplePuzzles/" + Convert.ToString(activePuzzle)); // Getting sprites from Resources folder
 
         for(int i = 0; i < _puzzlePiecesSprites.Length - 1; i++)                                                // Adding to static array only necessary

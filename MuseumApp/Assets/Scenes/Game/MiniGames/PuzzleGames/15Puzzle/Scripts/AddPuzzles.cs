@@ -24,13 +24,15 @@ public class AddPuzzles : MonoBehaviour
 
     public static GameObject[] puzzleButtonsSolved;
     public static AudioClip winAudio; // Audio, plays on win
+
     public static int activePuzzle;
+    public int puzzlePhotosAmount;
 
     private void Awake()
     {
         winAudio = Resources.Load("Sounds/WinAudio") as AudioClip;    // Geting win audioclip from Resources folder
 
-        activePuzzle = UnityEngine.Random.Range(1, 6);
+        activePuzzle = UnityEngine.Random.Range(1, puzzlePhotosAmount + 1);
         _puzzlePiecesSprites = Resources.LoadAll<Sprite>("For9Puzzle/" + Convert.ToString(activePuzzle)); // Getting sprites from Resources folder
 
         puzzlePiecesSprites = _puzzlePiecesSprites;                   // Reference and object connection
@@ -45,6 +47,7 @@ public class AddPuzzles : MonoBehaviour
             go.GetComponent<Image>().sprite = puzzlePiecesSprites[j]; // Put sprite on piece
         }
         puzzleButtons[8].GetComponent<Image>().sprite = null;         // Making one piece empty
+        tipImage.GetComponent<Image>().preserveAspect = true;
 
     }
 }

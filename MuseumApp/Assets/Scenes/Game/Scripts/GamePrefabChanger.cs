@@ -8,7 +8,15 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
     
     [Header("Array for win description for 9Puzzle")]
     public GameObject[] _FifteenwinPrefabs;
-    public static GameObject[] fifteenWinPrefabs; 
+    public static GameObject[] fifteenWinPrefabs;
+    
+    [Header("Array for win description for MapPuzzle")]
+    public GameObject[] _mapWinPrefabs;
+    public static GameObject[] mapWinPrefabs; 
+    
+    [Header("Array for MapPuzzles")]
+    public GameObject[] _mapPuzzlePrefabs;
+    public static GameObject[] mapPuzzlePrefabs; 
     
     [Header("Array for all prefabs")]
     public GameObject[] _allPrefabs;
@@ -25,6 +33,8 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
         allPrefabs = _allPrefabs;
         winPrefabs = _winPrefabs;
         fifteenWinPrefabs = _FifteenwinPrefabs;
+        mapPuzzlePrefabs = _mapPuzzlePrefabs;
+        mapWinPrefabs = _mapWinPrefabs;
         prefabPlace = _prefabPlace;
 
         Instantiate(allPrefabs[0], prefabPlace.transform, false); // По дефолту создавать префаб игрового меню при заходе на сцену Game

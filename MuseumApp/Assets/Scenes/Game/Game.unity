@@ -259,6 +259,11 @@ MonoBehaviour:
   - {fileID: 3431156981410507344, guid: 056608954128d9c45b3610f918d51f93, type: 3}
   - {fileID: 3431156981410507344, guid: a79075f7aea4b924ea50c40476400bae, type: 3}
   - {fileID: 3431156981410507344, guid: 7dd0b4bcb2791274486b1ac44bfa7437, type: 3}
+  _mapWinPrefabs:
+  - {fileID: 3431156981410507344, guid: 761dfb81a2a1549408a12808c96c1756, type: 3}
+  _mapPuzzlePrefabs:
+  - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
+  - {fileID: 8594043432467186280, guid: d3aea776e65ba6b4d96638e8522130ea, type: 3}
   _allPrefabs:
   - {fileID: 8594043432467186280, guid: b398a96d5aa9cdd459ddd133539d2f03, type: 3}
   - {fileID: 8594043432467186280, guid: e5c0212576b33c64eb1a5d05e086be05, type: 3}
