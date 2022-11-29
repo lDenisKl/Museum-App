@@ -174,7 +174,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20.2
+      scalar: 4.85
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -231,22 +231,22 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0.0027356148, b: 1, a: 1}
-        key1: {r: 0.0656673, g: 0.6132076, b: 0, a: 1}
-        key2: {r: 1, g: 0, b: 0, a: 0}
-        key3: {r: 1, g: 1, b: 1, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 23130
-        ctime1: 41249
-        ctime2: 65535
-        ctime3: 64957
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
+        key0: {r: 1, g: 0, b: 0.9775796, a: 1}
+        key1: {r: 0, g: 0.0027356148, b: 1, a: 1}
+        key2: {r: 0.9259217, g: 1, b: 0, a: 0}
+        key3: {r: 1, g: 0.6572623, b: 0, a: 0}
+        key4: {r: 0.0656673, g: 0.6132076, b: 0, a: 0}
+        key5: {r: 1, g: 1, b: 1, a: 0}
+        key6: {r: 0, g: 0.9225335, b: 1, a: 0}
+        key7: {r: 1, g: 0, b: 0, a: 0}
+        ctime0: 6746
+        ctime1: 15806
+        ctime2: 26021
+        ctime3: 33153
+        ctime4: 42020
+        ctime5: 46260
+        ctime6: 55705
+        ctime7: 65535
         atime0: 0
         atime1: 65535
         atime2: 0
@@ -256,7 +256,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 1
-        m_NumColorKeys: 3
+        m_NumColorKeys: 8
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -606,14 +606,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 25
+    maxNumParticles: 26
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.57
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -666,11 +666,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 21.89
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -753,7 +753,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.44
+      value: 6.36
       mode: 0
       spread: 0
       speed:
@@ -810,7 +810,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 181.2
       mode: 3
       spread: 0
       speed:

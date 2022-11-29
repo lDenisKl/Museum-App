@@ -73,6 +73,9 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
+    <Compile Include="Assets\Scenes\Study\Scripts\StudySceneStar.cs" />
+    <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
+    <Compile Include="Assets\Scenes\Study\Scripts\StudyButtons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

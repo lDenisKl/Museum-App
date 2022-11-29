@@ -23,6 +23,7 @@ public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут вып
 
     public void MoveToStudy() // Перемещение на учебную сцену
     {
+        MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
         SceneChanger.MoveToAnotherScene(2, 0);
     }
 
