@@ -9,10 +9,10 @@ public class Puzzle15Controller : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 30; i++) // Shuffling
-        {
-            ToShuffle();
-        }
+        //for (int i = 0; i < 30; i++) // Shuffling
+        //{
+        //    ToShuffle();
+        //}
         gameObject.GetComponent<AudioSource>().clip = Resources.Load("Sounds/PuzzleAudio") as AudioClip; // Getting puzzle audio
     }
     private void GameLogic() // Method with Nineteens logic
@@ -74,9 +74,11 @@ public class Puzzle15Controller : MonoBehaviour
             if (AddPuzzles.puzzleButtons[i].GetComponent<Image>().sprite == AddPuzzles.puzzlePiecesSprites[i])
             {
                 counter++;
+                
             }
             else { break; }
         }
+        Debug.Log(counter);
         if (counter == 8)
         {
             return true;
