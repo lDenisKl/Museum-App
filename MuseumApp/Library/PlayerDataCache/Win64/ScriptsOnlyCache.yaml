@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - AddPuzzles
     - AddPuzzlesToArr
     - AddPuzzlesToArray
+    - AnimationController
     - GameButtons
     - GamePrefabChanger
     - IsMapWin
@@ -24,6 +25,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
@@ -277,13 +279,40 @@ ScriptsOnlyBuild:
     methodName: OnClickButton
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToArticle
+    methodName: MoveToSights
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToMenu
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefabNoDestr
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefabNoDestr
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefabNoDestr
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToSights
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToSights
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToSights
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: Hide
   sceneClasses:
     Assets/Scenes/Game/Game.unity:
     - Class: 1
@@ -520,6 +549,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7362}
     - Class: 114
       Script: {instanceID: 7672}
+    - Class: 114
+      Script: {instanceID: 57484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -953,7 +984,7 @@ ScriptsOnlyBuild:
     className: StudySceneStar
   - hash:
       serializedVersion: 2
-      Hash: 2a206bf3516040e8a6ccfae6d8836841
+      Hash: 0ecc4b0559d6d18dbd4236ce51fbe284
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzles
@@ -1031,7 +1062,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: eaf736945338c25e68309b3b95a59471
+      Hash: b78c9700c1a1a0fc7ef0a4687144aff3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StudyPrefabChanger
@@ -1581,6 +1612,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b508133dc644ebb5ba69b25a4c6c85bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimationController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu/Menu.unity

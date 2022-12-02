@@ -21,10 +21,27 @@ public class StudyButtons : MonoBehaviour
         DestroyAll();
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[number]);
     }
+
+    public void MoveToAnotherPrefabNoDestr(int number)
+    {
+        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[number]);
+    }
     
+    public void Hide()
+    {
+        AnimationController.HideMenu();
+        Destroy(gameObject, 1.3f);
+    }
+
     public void MoveToArticle(int number)
     {
         DestroyAll();
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.articlePrefabs[number]);
+    }
+
+    public void MoveToSights(int number)
+    {
+        DestroyAll();
+        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.sightsPrefabs[number]);
     }
 }

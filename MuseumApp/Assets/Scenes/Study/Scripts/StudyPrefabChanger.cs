@@ -10,6 +10,10 @@ public class StudyPrefabChanger : MonoBehaviour
     public GameObject[] _articlePrefabs;
     public static GameObject[] articlePrefabs;
 
+    [Header("Array for sight articles prefabs")]
+    public GameObject[] _sightsPrefabs;
+    public static GameObject[] sightsPrefabs;
+
     [Header("Prefab place")]
     public GameObject _prefabPlace;
     public static GameObject prefabPlace;
@@ -17,7 +21,7 @@ public class StudyPrefabChanger : MonoBehaviour
 
     private void Awake()
     {
-        // —сылки на префабы
+        sightsPrefabs = _sightsPrefabs;
         articlePrefabs = _articlePrefabs;
         allPrefabs = _allPrefabs;
         prefabPlace = _prefabPlace;

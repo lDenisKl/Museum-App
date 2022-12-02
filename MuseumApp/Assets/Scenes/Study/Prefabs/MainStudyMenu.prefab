@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b12dfc54c064f1a45843fedd3ea0a202, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1233,7 +1233,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7580837549586134121}
         m_TargetAssemblyTypeName: StudyButtons, Assembly-CSharp
-        m_MethodName: MoveToArticle
+        m_MethodName: MoveToSights
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
+  m_Text: "\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438 "
 --- !u!1 &6399677327722636479
 GameObject:
   m_ObjectHideFlags: 0
