@@ -72,11 +72,14 @@
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
+    <Compile Include="Assets\AnimationController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\AnimationController.cs" />
+    <Compile Include="Assets\Scenes\Study\Prefabs\Articles\Scripts\Article.cs" />
+    <Compile Include="Assets\Scenes\Study\Prefabs\Articles\Scripts\Data.cs" />
+    <Compile Include="Assets\Scenes\Study\Scripts\ArticleController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

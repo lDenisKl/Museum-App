@@ -10,7 +10,7 @@ public class StudyButtons : MonoBehaviour
             Destroy(StudyPrefabChanger.prefabPlace.transform.GetChild(i).gameObject);
         }
     }
-    public void MoveToMenu() // Перемещение на игровую сцену
+    public void MoveToMenu()
     {
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[1]);
         SceneChanger.MoveToAnotherScene(0, 2);
@@ -43,5 +43,6 @@ public class StudyButtons : MonoBehaviour
     {
         DestroyAll();
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.sightsPrefabs[number]);
+        ArticleController.SetArticle(number);
     }
 }

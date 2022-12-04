@@ -1233,7 +1233,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7580837549586134121}
         m_TargetAssemblyTypeName: StudyButtons, Assembly-CSharp
-        m_MethodName: MoveToSights
+        m_MethodName: MoveToArticle
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
