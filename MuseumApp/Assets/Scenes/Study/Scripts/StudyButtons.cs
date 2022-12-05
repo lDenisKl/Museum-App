@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using static UnityEngine.UI.Button;
 
 public class StudyButtons : MonoBehaviour
 {
@@ -39,10 +40,10 @@ public class StudyButtons : MonoBehaviour
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.articlePrefabs[number]);
     }
 
-    public void MoveToSights(int number)
+    public void MoveToSights()
     {
         DestroyAll();
-        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.sightsPrefabs[number]);
-        ArticleController.SetArticle(number);
+        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.sightsPrefabs[0]);
+        ArticleController.SetArticle(gameObject.GetComponent<SightMenuButton>()._sightNumber+1);
     }
 }
