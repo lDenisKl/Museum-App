@@ -442,6 +442,7 @@ MonoBehaviour:
   - {fileID: 6399677327003367812, guid: b76a81a6310852047b6ed9a126a60a6d, type: 3}
   - {fileID: 8556179384282977098, guid: 1b5b7d56b60873b4baebdbf3aa246112, type: 3}
   - {fileID: 6399677327003367812, guid: 94d6b9f4180e2d946944dc30c338cf99, type: 3}
+  - {fileID: 6399677327003367812, guid: 54f18518db900a942a890503ef084881, type: 3}
   _articlePrefabs:
   - {fileID: 6399677327003367812, guid: 4b6935792dc37d34abfa1561c7ddc6ca, type: 3}
   _sightsPrefabs:

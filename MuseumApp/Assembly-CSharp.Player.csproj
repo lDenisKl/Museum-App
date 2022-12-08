@@ -59,7 +59,7 @@
     <Compile Include="Assets\Scenes\Study\Scripts\ArticleController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\SceneStart.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyButtons.cs" />
-    <Compile Include="Assets\Scenes\Study\Prefabs\Articles\Scripts\SightMenu.cs" />
+    <Compile Include="Assets\Scenes\Study\SightMenu\Scripts\SightMenu.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\AddPuzzlesToArray.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\IsMapWin.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudySceneStar.cs" />
@@ -68,19 +68,20 @@
     <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
-    <Compile Include="Assets\Scenes\Study\Prefabs\Articles\Scripts\Article.cs" />
+    <Compile Include="Assets\Scenes\MainScripts\Article.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\IsWin.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MapPuzzleController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
-    <Compile Include="Assets\AnimationController.cs" />
+    <Compile Include="Assets\Scenes\Study\Animations\AnimationController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
-    <Compile Include="Assets\Scenes\Study\Prefabs\Articles\Scripts\SightMenuButton.cs" />
+    <Compile Include="Assets\Scenes\Study\SightMenu\Scripts\SightMenuButton.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
+    <Compile Include="Assets\ArticleScroll.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
