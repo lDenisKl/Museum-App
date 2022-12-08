@@ -6,6 +6,7 @@ public class SceneStartMenu : MonoBehaviour
 {
     private void Awake()
     {
+        Debug.Log(Application.streamingAssetsPath);
         // Get settings values from PlayerPrefs
         if (PlayerPrefs.HasKey("tip") && PlayerPrefs.GetInt("tip") == 1) 
         {
@@ -22,10 +23,10 @@ public class SceneStartMenu : MonoBehaviour
         }
         // Instantiate default menu form
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[2]);
-        FileInfo[] fileAmount = new DirectoryInfo("Assets/Resources/Saves/").GetFiles("*.json");                     // Getting all JSON files
+        FileInfo[] fileAmount = new DirectoryInfo(Application.streamingAssetsPath + "/").GetFiles("*.json");                     // Getting all JSON files
         foreach (var item in fileAmount)
         {
-            string json = File.ReadAllText("Assets/Resources/Saves/" + Convert.ToString(item.Name));                 // Read JSON file
+            string json = File.ReadAllText(Application.streamingAssetsPath + "/" + Convert.ToString(item.Name));                 // Read JSON file
             Article go = JsonUtility.FromJson<Article>(json);                                                       // Converting from JSON into class
             Article.sightArticles.Add(go);                                                                          // Adding to array
         }

@@ -80,8 +80,9 @@
     <Compile Include="Assets\Scenes\Study\SightMenu\Scripts\SightMenuButton.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
+    <Compile Include="Assets\Scenes\Study\Scripts\ArticleScroll.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\ArticleScroll.cs" />
+    <Compile Include="Assets\DescriptionController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

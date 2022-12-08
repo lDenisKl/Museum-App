@@ -9,7 +9,7 @@ public class SightMenu : MonoBehaviour
 
     private void Awake()
     {
-        int fileAmount = new DirectoryInfo("Assets/Resources/Saves/").GetFiles("*.json").Length;
+        int fileAmount = new DirectoryInfo(Application.streamingAssetsPath + "/").GetFiles("*.json").Length;
         for (int i = 0; i < fileAmount; i++)
         {
             var go = Instantiate(button, place, false);

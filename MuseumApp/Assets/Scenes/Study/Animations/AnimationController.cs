@@ -15,4 +15,8 @@ public class AnimationController : MonoBehaviour
     {
         telo.GetComponent<Animator>().Play("HideMenu");
     }
+    public static void HideDescription()
+    {
+        telo.GetComponent<Animator>().Play("HideDescription");
+    }
 }
