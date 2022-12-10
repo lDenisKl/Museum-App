@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
+    <Compile Include="Assets\Scenes\Study\Map\Scripts\DescriptionController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\Puzzle15Controller.cs" />
     <Compile Include="Assets\Scenes\MainScripts\Article.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\ArticleScroll.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\DescriptionController.cs" />
+    <Compile Include="Assets\Scenes\Study\Map\Scripts\SightButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

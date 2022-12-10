@@ -255,6 +255,7 @@ MonoBehaviour:
   - {fileID: 8556179384282977098, guid: 1b5b7d56b60873b4baebdbf3aa246112, type: 3}
   - {fileID: 1313881976239150157, guid: d4cb643f6d0cd294eb86ee801af509bb, type: 3}
   - {fileID: 1313881976239150157, guid: be67068f9164f654fb9818f23dc87689, type: 3}
+  - {fileID: 1313881976239150157, guid: 0f2f29440d57a0c4dab5fd7c2a9d8269, type: 3}
   _prefabPlace: {fileID: 1332201369}
 --- !u!114 &399710010
 MonoBehaviour:

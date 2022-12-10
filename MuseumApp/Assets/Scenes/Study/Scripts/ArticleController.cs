@@ -1,14 +1,12 @@
-
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class ArticleController : MonoBehaviour
 {
     public static Text nameText;
     [SerializeField] private Text _nameText;
-    public static TextMeshProUGUI descriptionText;
-    [SerializeField] private TextMeshProUGUI _descriptionText;
+    public static Text descriptionText;
+    [SerializeField] private Text _descriptionText;
     public static Text locationText;
     [SerializeField] private Text _locationText;
     public static GameObject sightPhoto;

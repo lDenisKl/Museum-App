@@ -28,8 +28,8 @@ public class StudyButtons : MonoBehaviour
     }
     public void ToDescrp(int number)
     {
-        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[number]);
-        DescriptionController.SetDescription(0);
+        StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[4]);
+        DescriptionController.SetDescription(number);
     }
     
     public void Hide()
@@ -48,6 +48,6 @@ public class StudyButtons : MonoBehaviour
     {
         DestroyAll();
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.sightsPrefabs[0]);
-        ArticleController.SetArticle(gameObject.GetComponent<SightMenuButton>()._sightNumber+1);
+        ArticleController.SetArticle(gameObject.GetComponent<SightMenuButton>()._sightNumber-1);
     }
 }
