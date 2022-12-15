@@ -239,20 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9275c47317ebc47ab1275b383a3175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winPrefabs:
-  - {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
-  - {fileID: 3431156981410507344, guid: 421cf8a772421af488c135c2bd772688, type: 3}
-  - {fileID: 3431156981410507344, guid: 9062c097e1ca44041807b8f2179089e4, type: 3}
-  - {fileID: 3431156981410507344, guid: 4b410f92af89f284a8e28923daef8a26, type: 3}
-  - {fileID: 3431156981410507344, guid: 6f257533ba6a95647b8e2c990dfee156, type: 3}
-  - {fileID: 3431156981410507344, guid: 3eba62357548baf45976d59414d311a9, type: 3}
-  - {fileID: 3431156981410507344, guid: 1f8ea04b86d9f09499c976a8c968a757, type: 3}
-  - {fileID: 3431156981410507344, guid: 939122527fb63844cba1309ee19b0ea4, type: 3}
-  - {fileID: 3431156981410507344, guid: c75d74f441950d64eb8713b433e4f115, type: 3}
-  - {fileID: 3431156981410507344, guid: 283763bd1800b8041aada4d6b04a6856, type: 3}
-  - {fileID: 3431156981410507344, guid: 21e05cdca08507c4984f79dd0024bd83, type: 3}
-  - {fileID: 3431156981410507344, guid: 4e72210c0ac6ee34fa1b1703e6f5374f, type: 3}
-  - {fileID: 3431156981410507344, guid: c3ab7c3c2452cc7408d38ed2eb6e72b5, type: 3}
   _FifteenwinPrefabs:
   - {fileID: 3431156981410507344, guid: 3ebc746b6fe37f84bb8383e726950720, type: 3}
   - {fileID: 3431156981410507344, guid: 486813553f97e5a4d92ab0f4295e0417, type: 3}
@@ -261,6 +247,7 @@ MonoBehaviour:
   - {fileID: 3431156981410507344, guid: 7dd0b4bcb2791274486b1ac44bfa7437, type: 3}
   _mapWinPrefabs:
   - {fileID: 3431156981410507344, guid: 761dfb81a2a1549408a12808c96c1756, type: 3}
+  - {fileID: 3431156981410507344, guid: 13545a13e3e96324fbf648d5302477fb, type: 3}
   _mapPuzzlePrefabs:
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
   - {fileID: 8594043432467186280, guid: d3aea776e65ba6b4d96638e8522130ea, type: 3}
@@ -269,7 +256,7 @@ MonoBehaviour:
   - {fileID: 8594043432467186280, guid: e5c0212576b33c64eb1a5d05e086be05, type: 3}
   - {fileID: 882069285913518362, guid: 28db2534224626542be2dbde0ca40aa9, type: 3}
   - {fileID: 882069285913518362, guid: 109bcdfed5dcca449baa8bcae23223ba, type: 3}
-  - {fileID: 5554013188307644433, guid: 0e058fd95ad670c4fa4c0ccdce9c0de9, type: 3}
+  - {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
   - {fileID: 8556179384282977098, guid: 1b5b7d56b60873b4baebdbf3aa246112, type: 3}
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
   _prefabPlace: {fileID: 734713576}

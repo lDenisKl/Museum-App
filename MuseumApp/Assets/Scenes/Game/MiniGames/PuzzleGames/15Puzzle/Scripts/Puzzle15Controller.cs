@@ -90,8 +90,6 @@ public class Puzzle15Controller : MonoBehaviour
     {
         gameObject.GetComponent<AudioSource>().clip = AddPuzzles.winAudio;
         gameObject.GetComponent<AudioSource>().Play();
-        var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform);
-        Destroy(go, 3f);
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.fifteenWinPrefabs[AddPuzzles.activePuzzle - 1]);
     }
 

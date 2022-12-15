@@ -43,7 +43,6 @@ public class StudyButtons : MonoBehaviour
         Destroy(gameObject, 1f);
     }
 
-
     public void MoveToSights()
     {
         DestroyAll();

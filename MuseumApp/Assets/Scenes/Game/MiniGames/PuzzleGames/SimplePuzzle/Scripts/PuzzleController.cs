@@ -79,9 +79,7 @@ public class PuzzleController : MonoBehaviour
 
     /* VVV Win actions VVV */
     private void Win()
-    {
-        var go = Instantiate(GamePrefabChanger.allPrefabs[4], GamePrefabChanger.prefabPlace.transform);     // Particle initialization
-        Destroy(go, 3f);                                                                                    // Particle destroying after 3 sec 
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[AddPuzzlesToArr.activePuzzle - 1]);     // Win description initialization
+    {                                                                                   // Particle destroying after 3 sec 
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[4]);     // Win description initialization
     }
 }
