@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public static void MoveToAnotherScene(int sceneNum, int activeSceneNum)
+    public static void MoveToAnotherScene(int sceneNum, int activeSceneNum) // Method for changing scene
     {
-        switch (activeSceneNum)
+        switch (activeSceneNum)// Setting loading prefab
         {
             case 0:
                 MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
@@ -14,9 +14,9 @@ public class SceneChanger : MonoBehaviour
                 GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[5]);
                 break;
             case 2:
-                // Для сцены обучения смена на загрузочный префаб
+                StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.allPrefabs[1]);
                 break;
         }
-        SceneManager.LoadScene(sceneNum);
+        SceneManager.LoadScene(sceneNum); // Move to another scene
     }
 }

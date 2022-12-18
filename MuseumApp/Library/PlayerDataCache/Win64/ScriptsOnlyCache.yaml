@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - GameButtons
     - GamePrefabChanger
     - IsMapWin
+    - LoadingDestroy
     - MapPuzzleController
     - MenuButtons
     - MenuPrefabChanger
@@ -26,6 +27,7 @@ ScriptsOnlyBuild:
     - StudyButtons
     - StudyPrefabChanger
     - StudySceneStar
+    - Win9ArticleController
     - WinArticleController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -153,7 +155,40 @@ ScriptsOnlyBuild:
     methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
     methodName: MoveToMapPuzzle
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: MoveToMainMenu
@@ -161,83 +196,20 @@ ScriptsOnlyBuild:
     fullTypeName: GameButtons
     methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
     fullTypeName: Puzzle15Controller
     methodName: OnClickButton
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: PlayAgain
-  - assembly: Assembly-CSharp
-    fullTypeName: GameButtons
-    methodName: MoveToAnotherPrefab
-  - assembly: Assembly-CSharp
-    fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefabNoDestr
-  - assembly: Assembly-CSharp
-    fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: HideDescription
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToAnotherPrefab
+  - assembly: Assembly-CSharp
+    fullTypeName: StudyButtons
+    methodName: MoveToMenu
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToSights
@@ -249,10 +221,10 @@ ScriptsOnlyBuild:
     methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefab
+    methodName: MoveToAnotherPrefabNoDestr
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToMenu
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: ToDescrp
@@ -339,55 +311,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 1570}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 3018}
     - Class: 114
       Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4598}
+      Script: {instanceID: 3592}
     - Class: 114
-      Script: {instanceID: 4736}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 5576}
+      Script: {instanceID: 4602}
     - Class: 114
-      Script: {instanceID: 5918}
+      Script: {instanceID: 4740}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 4770}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 5582}
     - Class: 114
-      Script: {instanceID: 6246}
+      Script: {instanceID: 5924}
     - Class: 114
-      Script: {instanceID: 6362}
+      Script: {instanceID: 6018}
     - Class: 114
-      Script: {instanceID: 6754}
+      Script: {instanceID: 6204}
     - Class: 114
-      Script: {instanceID: 6956}
+      Script: {instanceID: 6252}
     - Class: 114
-      Script: {instanceID: 7060}
+      Script: {instanceID: 6368}
     - Class: 114
-      Script: {instanceID: 7372}
+      Script: {instanceID: 6760}
     - Class: 114
-      Script: {instanceID: 7384}
+      Script: {instanceID: 6962}
     - Class: 114
-      Script: {instanceID: 7682}
+      Script: {instanceID: 7066}
     - Class: 114
-      Script: {instanceID: 7944}
+      Script: {instanceID: 7378}
     - Class: 114
-      Script: {instanceID: 8700}
+      Script: {instanceID: 7390}
     - Class: 114
-      Script: {instanceID: 9434}
+      Script: {instanceID: 7688}
     - Class: 114
-      Script: {instanceID: 38966}
+      Script: {instanceID: 7950}
+    - Class: 114
+      Script: {instanceID: 8706}
+    - Class: 114
+      Script: {instanceID: 9438}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -430,41 +406,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1572}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2344}
-    - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2850}
     - Class: 114
       Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 4760}
+      Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4844}
+      Script: {instanceID: 4764}
     - Class: 114
-      Script: {instanceID: 5096}
+      Script: {instanceID: 4770}
     - Class: 114
-      Script: {instanceID: 5530}
+      Script: {instanceID: 4850}
     - Class: 114
-      Script: {instanceID: 5902}
+      Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 6288}
+      Script: {instanceID: 5908}
     - Class: 114
-      Script: {instanceID: 6362}
+      Script: {instanceID: 6018}
     - Class: 114
-      Script: {instanceID: 6754}
+      Script: {instanceID: 6294}
     - Class: 114
-      Script: {instanceID: 6956}
+      Script: {instanceID: 6368}
     - Class: 114
-      Script: {instanceID: 7372}
+      Script: {instanceID: 6760}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 6962}
     - Class: 114
-      Script: {instanceID: 8882}
+      Script: {instanceID: 7378}
+    - Class: 114
+      Script: {instanceID: 7922}
+    - Class: 114
+      Script: {instanceID: 8888}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -509,45 +487,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 1570}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2340}
-    - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2850}
     - Class: 114
       Script: {instanceID: 3094}
     - Class: 114
       Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4528}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 4736}
+      Script: {instanceID: 4532}
     - Class: 114
-      Script: {instanceID: 5012}
+      Script: {instanceID: 4740}
     - Class: 114
-      Script: {instanceID: 5440}
+      Script: {instanceID: 4770}
     - Class: 114
-      Script: {instanceID: 5696}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 6362}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 6754}
+      Script: {instanceID: 5702}
     - Class: 114
-      Script: {instanceID: 7372}
+      Script: {instanceID: 6368}
     - Class: 114
-      Script: {instanceID: 7384}
+      Script: {instanceID: 6760}
     - Class: 114
-      Script: {instanceID: 7682}
+      Script: {instanceID: 7378}
     - Class: 114
-      Script: {instanceID: 7902}
+      Script: {instanceID: 7390}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 7688}
     - Class: 114
-      Script: {instanceID: 8426}
+      Script: {instanceID: 7908}
+    - Class: 114
+      Script: {instanceID: 7922}
+    - Class: 114
+      Script: {instanceID: 8432}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -577,12 +557,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
-  - hash:
-      serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -765,6 +739,12 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
+      Hash: b23b5d4d7e075c4816981ed19156511f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinArticleController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -831,6 +811,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: b23b5d4d7e075c4816981ed19156511f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Win9ArticleController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -859,6 +845,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: Bone
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -993,7 +985,7 @@ ScriptsOnlyBuild:
     className: StudySceneStar
   - hash:
       serializedVersion: 2
-      Hash: 0ecc4b0559d6d18dbd4236ce51fbe284
+      Hash: ffb6815be67caf6a7286a7dacfd62d38
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzles
@@ -1048,6 +1040,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadingDestroy
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
@@ -1071,7 +1069,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: b78c9700c1a1a0fc7ef0a4687144aff3
+      Hash: 430551dc8d31c307e3ee964d9c8b3011
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StudyPrefabChanger
@@ -1419,7 +1417,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 47ff44f58eab92e2ed4a40ced437d3d3
+      Hash: 4a8bea672b6f67b6b75889e0b7e3a904
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePrefabChanger
@@ -1645,16 +1643,11 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: b23b5d4d7e075c4816981ed19156511f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WinArticleController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu/Menu.unity
   - Assets/Scenes/Game/Game.unity
   - Assets/Scenes/Study/Study.unity
-  playerPath: "C:/Users/user/Desktop/\u041F\u0430\u043C/\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438
+  playerPath: "C:/Users/user/Desktop/\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438
+    \u0423\u0445\u0442\u044B 0.0.3/\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438
     \u0423\u0445\u0442\u044B.exe"

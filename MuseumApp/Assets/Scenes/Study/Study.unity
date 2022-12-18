@@ -445,10 +445,7 @@ MonoBehaviour:
   - {fileID: 6399677327003367812, guid: e1426404d55e5cb4298c985a86099b9b, type: 3}
   - {fileID: 6399677327003367812, guid: 54f18518db900a942a890503ef084881, type: 3}
   - {fileID: 6399677327003367812, guid: 4b6935792dc37d34abfa1561c7ddc6ca, type: 3}
-  _articlePrefabs:
-  - {fileID: 6399677327003367812, guid: 4b6935792dc37d34abfa1561c7ddc6ca, type: 3}
-  _sightsPrefabs:
-  - {fileID: 6399677327003367812, guid: 4b6935792dc37d34abfa1561c7ddc6ca, type: 3}
+  _articlePrefab: {fileID: 6399677327003367812, guid: 4b6935792dc37d34abfa1561c7ddc6ca, type: 3}
   _prefabPlace: {fileID: 203824578}
 --- !u!114 &2146265141
 MonoBehaviour:

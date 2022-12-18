@@ -1,41 +1,35 @@
 using UnityEngine;
 
-public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут выполняться кнопками внутри сцены Menu
+public class MenuButtons : MonoBehaviour
 {
-    public static void DestroyAll()
+    public static void DestroyAll() // Method for destroying all objects on the scene
     {
         for (int i = 0; i < MenuPrefabChanger.prefabPlace.transform.childCount; i++)
         {
             Destroy(MenuPrefabChanger.prefabPlace.transform.GetChild(i).gameObject);
         }
     }
-    public void MoveToPlay() // Перемещение на игровую сцену
+
+    public void MoveToPlay() // Move to Play scene
     {
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
         SceneChanger.MoveToAnotherScene(1, 0);
     }
 
-    public void MoveToAnotherPrefab(int number)
+    public void MoveToAnotherPrefab(int number) // Set another prefab
     {
         DestroyAll();
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[number]);
     }
 
-    public void MoveToStudy() // Перемещение на учебную сцену
+    public void MoveToStudy() // Move to Study scene
     {
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);
         SceneChanger.MoveToAnotherScene(2, 0);
     }
-
-    public void MoveToSettings()
-    {
-        DestroyAll();
-        MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[1]);
-    }
     
-    public void SwitchTips()
+    public void SwitchTips() // Method for swiching tips with toggle
     {
-        
         if (SettingsController.tipToggle1.isOn)
         {
             SettingsController.isTipOn = false;
@@ -48,11 +42,11 @@ public class MenuButtons : MonoBehaviour // Скрипт с методами, которые будут вып
         }
     }
 
-    public void ControllVolume()
+    public void ControllVolume() // Method, controlling volume
     {
-        SettingsController.volume = SettingsController.volumeSlider.value;
-        AudioListener.volume = SettingsController.volume;
-        PlayerPrefs.SetFloat("volume", SettingsController.volume);
+        SettingsController.volume = SettingsController.volumeSlider.value; // Getting value from toogle and setting it in volume variable
+        AudioListener.volume = SettingsController.volume;                  // Setting audiolistener volume
+        PlayerPrefs.SetFloat("volume", SettingsController.volume);         // Saving volume variable
     }
 
     public void Quit()

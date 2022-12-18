@@ -6,13 +6,9 @@ public class StudyPrefabChanger : MonoBehaviour
     public GameObject[] _allPrefabs;
     public static GameObject[] allPrefabs;
     
-    [Header("Array for article prefabs")]
-    public GameObject[] _articlePrefabs;
-    public static GameObject[] articlePrefabs;
-
-    [Header("Array for sight articles prefabs")]
-    public GameObject[] _sightsPrefabs;
-    public static GameObject[] sightsPrefabs;
+    [Header("Article prefab")]
+    public GameObject _articlePrefab;
+    public static GameObject articlePrefab;
 
     [Header("Prefab place")]
     public GameObject _prefabPlace;
@@ -21,15 +17,14 @@ public class StudyPrefabChanger : MonoBehaviour
 
     private void Awake()
     {
-        sightsPrefabs = _sightsPrefabs;
-        articlePrefabs = _articlePrefabs;
+        articlePrefab = _articlePrefab;
         allPrefabs = _allPrefabs;
         prefabPlace = _prefabPlace;
 
-        Instantiate(allPrefabs[0], prefabPlace.transform, false); // По дефолту создавать префаб игрового меню при заходе на сцену Game
+        ChangePrefab(allPrefabs[0]); // Set default prefab (Game Menu)
     }
 
-    public static void ChangePrefab(GameObject prefab) // Метод, реализующий смену префабов внутри сцены Game
+    public static void ChangePrefab(GameObject prefab) // Method for changing prefab
     {
         Instantiate(prefab, prefabPlace.transform, false);
     }

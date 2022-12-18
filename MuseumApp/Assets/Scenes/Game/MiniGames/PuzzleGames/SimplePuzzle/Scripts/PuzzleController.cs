@@ -18,7 +18,7 @@ public class PuzzleController : MonoBehaviour
 
     private void Awake()
     {
-        winAudio = Resources.Load("Sounds/WinAudio") as AudioClip; // Getting audio from Resources folder
+        winAudio = Resources.Load("Sounds/Games/WinAudio") as AudioClip; // Getting audio from Resources folder
     }
 
     private void Update() 
@@ -66,7 +66,7 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    /* VVV Check if puzzle solved VVV */
+    /* VVV Check if puzzle is solved VVV */
     private bool IsGameWin()
     {
         if (IsWin.solvedPuzzles == 9)
@@ -79,7 +79,7 @@ public class PuzzleController : MonoBehaviour
 
     /* VVV Win actions VVV */
     private void Win()
-    {                                                                                   // Particle destroying after 3 sec 
+    {                                                                                    
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[4]);     // Win description initialization
     }
 }

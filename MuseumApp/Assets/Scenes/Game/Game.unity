@@ -239,15 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9275c47317ebc47ab1275b383a3175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FifteenwinPrefabs:
-  - {fileID: 3431156981410507344, guid: 3ebc746b6fe37f84bb8383e726950720, type: 3}
-  - {fileID: 3431156981410507344, guid: 486813553f97e5a4d92ab0f4295e0417, type: 3}
-  - {fileID: 3431156981410507344, guid: 056608954128d9c45b3610f918d51f93, type: 3}
-  - {fileID: 3431156981410507344, guid: a79075f7aea4b924ea50c40476400bae, type: 3}
-  - {fileID: 3431156981410507344, guid: 7dd0b4bcb2791274486b1ac44bfa7437, type: 3}
-  _mapWinPrefabs:
-  - {fileID: 3431156981410507344, guid: 761dfb81a2a1549408a12808c96c1756, type: 3}
+  _winPrefabs:
+  - {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
   - {fileID: 3431156981410507344, guid: 13545a13e3e96324fbf648d5302477fb, type: 3}
+  - {fileID: 3431156981410507344, guid: 9cf238d669c3b044383ba441117b966c, type: 3}
   _mapPuzzlePrefabs:
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
   - {fileID: 8594043432467186280, guid: d3aea776e65ba6b4d96638e8522130ea, type: 3}

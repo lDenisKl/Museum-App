@@ -9,13 +9,9 @@ public class Puzzle15Controller : MonoBehaviour
 
     private void Start()
     {
-        //for (int i = 0; i < 30; i++) // Shuffling
-        //{
-        //    ToShuffle();
-        //}
-        gameObject.GetComponent<AudioSource>().clip = Resources.Load("Sounds/PuzzleAudio") as AudioClip; // Getting puzzle audio
+        gameObject.GetComponent<AudioSource>().clip = Resources.Load("Sounds/Games/PuzzleAudio") as AudioClip; // Getting puzzle audio
     }
-    private void GameLogic() // Method with Nineteens logic
+    private void GameLogic() // Method with Nines logic
     {
         if (index > 0 && AddPuzzles.puzzleButtons[index - 1].GetComponent<Image>().sprite == null &&
             index != 3 && index != 6)
@@ -78,7 +74,6 @@ public class Puzzle15Controller : MonoBehaviour
             }
             else { break; }
         }
-        Debug.Log(counter);
         if (counter == 8)
         {
             return true;
@@ -90,7 +85,7 @@ public class Puzzle15Controller : MonoBehaviour
     {
         gameObject.GetComponent<AudioSource>().clip = AddPuzzles.winAudio;
         gameObject.GetComponent<AudioSource>().Play();
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.fifteenWinPrefabs[AddPuzzles.activePuzzle - 1]);
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[2]);
     }
 
 }

@@ -92,6 +92,6 @@ public class MapPuzzleController : MonoBehaviour
     /* VVV Функция, используемая при выигрыше VVV */
     public static void Win()
     {                                                                             // Уничтожение партиклов спустя 3 секунды
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.mapWinPrefabs[0]);     // Инизиализация победного описания
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.winPrefabs[1]);     // Инизиализация победного описания
     }
 }

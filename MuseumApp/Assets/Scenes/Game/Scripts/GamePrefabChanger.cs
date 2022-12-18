@@ -3,13 +3,9 @@ using UnityEngine;
 public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префабов внутри сцены Game
 {
     
-    [Header("Array for win description for 9Puzzle")]
-    public GameObject[] _FifteenwinPrefabs;
-    public static GameObject[] fifteenWinPrefabs;
-    
-    [Header("Array for win description for MapPuzzle")]
-    public GameObject[] _mapWinPrefabs;
-    public static GameObject[] mapWinPrefabs; 
+    [Header("Array for win description")]
+    public GameObject[] _winPrefabs;
+    public static GameObject[] winPrefabs; 
     
     [Header("Array for MapPuzzles")]
     public GameObject[] _mapPuzzlePrefabs;
@@ -28,9 +24,8 @@ public class GamePrefabChanger : MonoBehaviour // Скрипт для смены игровых префа
     {
         // Ссылки на префабы
         allPrefabs = _allPrefabs;
-        fifteenWinPrefabs = _FifteenwinPrefabs;
         mapPuzzlePrefabs = _mapPuzzlePrefabs;
-        mapWinPrefabs = _mapWinPrefabs;
+        winPrefabs = _winPrefabs;
         prefabPlace = _prefabPlace;
 
         Instantiate(allPrefabs[0], prefabPlace.transform, false); // По дефолту создавать префаб игрового меню при заходе на сцену Game

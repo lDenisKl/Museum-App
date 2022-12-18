@@ -58,12 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Study\Scripts\ArticleController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\SceneStart.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\WinArticleController.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyButtons.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\Win9ArticleController.cs" />
     <Compile Include="Assets\Scenes\Study\SightMenu\Scripts\SightMenu.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\AddPuzzlesToArray.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\IsMapWin.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudySceneStar.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
+    <Compile Include="Assets\Scenes\MainScripts\LoadingDestroy.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Map\Scripts\DescriptionController.cs" />
@@ -83,7 +86,6 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\WinArticleController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1862,7 +1862,7 @@ MonoBehaviour:
   - {fileID: 882069287210191355}
   - {fileID: 882069286944834159}
   - {fileID: 882069286304929210}
-  puzzlePhotosAmount: 13
+  puzzlePhotosAmount: 14
 --- !u!114 &1846974400192398009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,8 +2928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.021854168, y: 0.8261482}
   m_AnchorMax: {x: 0.11716667, y: 0.97700006}
-  m_AnchoredPosition: {x: -3.5, y: -1}
-  m_SizeDelta: {x: -7.9793015, y: -5.009899}
+  m_AnchoredPosition: {x: -11.150818, y: 5.9028015}
+  m_SizeDelta: {x: -23.281, y: -18.8156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6986408161022122333
 CanvasRenderer:

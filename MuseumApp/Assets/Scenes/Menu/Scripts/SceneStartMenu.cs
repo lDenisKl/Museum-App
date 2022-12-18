@@ -1,13 +1,13 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using static MenuPrefabChanger; // Connecting prefab changing script
 
 public class SceneStartMenu : MonoBehaviour
 {
     private void Awake()
     {
-        // Get settings values from PlayerPrefs
+        // Check settings values from PlayerPrefs and set needed values
         if (PlayerPrefs.HasKey("tip") && PlayerPrefs.GetInt("tip") == 1) 
         {
             SettingsController.isTipOn = true;
@@ -21,24 +21,22 @@ public class SceneStartMenu : MonoBehaviour
             SettingsController.volume = PlayerPrefs.GetFloat("volume");
             AudioListener.volume = PlayerPrefs.GetFloat("volume");
         }
-        // Instantiate default menu form
-        MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[2]);
-        FileInfo[] fileAmount = new DirectoryInfo(Application.streamingAssetsPath + "/").GetFiles("*.json");                     // Getting all JSON files
-        String[] jsonFiles = new String[fileAmount.Length];
+        
+        ChangePrefab(allPrefabs[2]); // Instantiate default menu form
+        FileInfo[] fileAmount = new DirectoryInfo(Application.streamingAssetsPath + "/").GetFiles("*.json"); // Getting all article JSON files
+        string[] jsonFiles = new string[fileAmount.Length]; // Creating array for file names
         for(int i = 0; i < fileAmount.Length; i++)
         {
-            jsonFiles[i] = fileAmount[i].Name;
+            jsonFiles[i] = fileAmount[i].Name; // Setting JSON files' names
         }
-        Array.Sort(jsonFiles);
+        Array.Sort(jsonFiles); // Sorting array with names
 
         foreach (var item in jsonFiles)
         {
-            
             string json = File.ReadAllText(Application.streamingAssetsPath + "/" + item);                 // Read JSON file
-            Article go = JsonUtility.FromJson<Article>(json);                                                       // Converting from JSON into class
-            Article.sightArticles.Add(go);                                                                          // Adding to array
+            Article go = JsonUtility.FromJson<Article>(json);                                             // Converting from JSON into class
+            Article.sightArticles.Add(go);                                                                // Adding to article array
         }
-        var loading = Instantiate(MenuPrefabChanger.allPrefabs[0], MenuPrefabChanger.prefabPlace.transform, false); // Instantiate loading image
-        Destroy(loading, 1f);                                                                                       // Destroy loading image
+        var loading = Instantiate(allPrefabs[0], prefabPlace.transform, false); // Instantiate loading image
     }
 }

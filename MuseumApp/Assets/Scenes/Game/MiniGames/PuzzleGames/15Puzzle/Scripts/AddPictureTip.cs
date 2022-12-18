@@ -15,6 +15,5 @@ public class AddPictureTip : MonoBehaviour
         {
             tipPic.SetActive(false);
         }
-        
     }
 }
