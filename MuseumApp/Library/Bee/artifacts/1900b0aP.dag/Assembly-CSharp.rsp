@@ -106,6 +106,8 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Mono.Data.dll"
+-r:"Assets/Plugins/Mono.Data.Sqlite.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll"
@@ -319,6 +321,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/DBManager.cs"
 "Assets/Scenes/Game/MiniGames/MapGame/Scripts/AddPuzzlesToArray.cs"
 "Assets/Scenes/Game/MiniGames/MapGame/Scripts/IsMapWin.cs"
 "Assets/Scenes/Game/MiniGames/MapGame/Scripts/MapPuzzleController.cs"
@@ -336,6 +339,7 @@
 "Assets/Scenes/MainScripts/Article.cs"
 "Assets/Scenes/MainScripts/LoadingDestroy.cs"
 "Assets/Scenes/MainScripts/SceneChanger.cs"
+"Assets/Scenes/Menu/Scripts/EditorController.cs"
 "Assets/Scenes/Menu/Scripts/MenuButtons.cs"
 "Assets/Scenes/Menu/Scripts/MenuPrefabChanger.cs"
 "Assets/Scenes/Menu/Scripts/SceneStartMenu.cs"

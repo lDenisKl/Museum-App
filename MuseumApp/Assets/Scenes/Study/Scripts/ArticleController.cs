@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ArticleController : MonoBehaviour
 {
     public static Text nameText;
     [SerializeField] private Text _nameText;
-    public static Text descriptionText;
-    [SerializeField] private Text _descriptionText;
+    public static TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI _descriptionText;
     public static Text locationText;
     [SerializeField] private Text _locationText;
     public static GameObject sightPhoto;
@@ -25,8 +26,8 @@ public class ArticleController : MonoBehaviour
     {
         nameText.text = Article.sightArticles[number].Name;
         descriptionText.text = Article.sightArticles[number].Description;
-        locationText.text = Article.sightArticles[number].Location;
-        sightPhoto.GetComponent<Image>().sprite = Resources.LoadAll<Sprite>(Article.sightArticles[number].PhotoPath)[9];
+        locationText.text = Article.sightArticles[number].ExtraInf;
+        sightPhoto.GetComponent<Image>().sprite = Resources.Load<Sprite>(Article.sightArticles[number].PhotoPath);
     }
 }
 

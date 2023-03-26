@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Drawing;
 
 public class SettingsController : MonoBehaviour
 {
@@ -34,5 +35,6 @@ public class SettingsController : MonoBehaviour
         {
             volumeSlider.value = PlayerPrefs.GetFloat("volume");
         }
+       
     }
 }

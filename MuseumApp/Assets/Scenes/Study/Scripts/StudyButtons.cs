@@ -51,5 +51,7 @@ public class StudyButtons : MonoBehaviour
         DestroyAll();
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.articlePrefab);
         ArticleController.SetArticle(gameObject.GetComponent<SightMenuButton>()._sightNumber-1);
+
+        ArticleController.descriptionText.text = ArticleController.descriptionText.text.Replace("NEWLINE","\n\n").Replace("TAB","\t");
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\IsMapWin.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudySceneStar.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPuzzles.cs" />
+    <Compile Include="Assets\Scenes\Menu\Scripts\EditorController.cs" />
     <Compile Include="Assets\Scenes\MainScripts\LoadingDestroy.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MapPuzzleController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
+    <Compile Include="Assets\DBManager.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Animations\AnimationController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
@@ -330,6 +332,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data">
+      <HintPath>Assets\Plugins\Mono.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>Assets\Plugins\Mono.Data.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

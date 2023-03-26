@@ -22,11 +22,12 @@ public class AddPuzzlesToArr : MonoBehaviour
     private void Awake()
     {
         puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/ForSimplePuzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for simple puzzles
-        activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)]; // Getting active sight object
-        while (activePuzzle.Squared == true) // Checking if photo is square
-        {
-            activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)];
-        }
+        activePuzzle = Article.sightArticles[0];//Random.Range(0, Article.sightArticles.Count)]; // Getting active sight object
+        
+        //while (activePuzzle.Squared == true) // Checking if photo is square
+        //{
+        //    activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)];
+        //}
         _puzzlePiecesSprites = Resources.LoadAll<Sprite>(activePuzzle.PhotoPath); // Getting sprites from Resources folder
 
         for(int i = 0; i < _puzzlePiecesSprites.Length - 1; i++)  // Adding to static array only necessary

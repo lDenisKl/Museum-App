@@ -31,14 +31,6 @@ public class AddPuzzles : MonoBehaviour
     private int[] gg = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 0}; // Indexes for pictures
 
 
-    public void fff()
-    {
-        activePuzzle = Article.sightArticles[UnityEngine.Random.Range(0, Article.sightArticles.Count)];
-        if(activePuzzle.Squared == false)
-        {
-            fff();
-        }
-    }
     private void Awake()
     {
         tipImage = _tipImage;
@@ -47,7 +39,11 @@ public class AddPuzzles : MonoBehaviour
 
         puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/For9Puzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for 9Puzzle
         winAudio = Resources.Load("Sounds/Games/WinAudio") as AudioClip;    // Geting win audioclip from Resources folder
-        fff();
+        activePuzzle = Article.sightArticles[UnityEngine.Random.Range(0, Article.sightArticles.Count)];
+        if (activePuzzle.Squared == false)
+        {
+            activePuzzle = Article.sightArticles[UnityEngine.Random.Range(0, Article.sightArticles.Count)];
+        }
         puzzlePiecesSprites = Resources.LoadAll<Sprite>(activePuzzle.PhotoPath); // Getting pieces
 
         int[] newArr = new int[9];
