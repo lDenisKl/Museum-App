@@ -22,7 +22,7 @@ public class AddPuzzlesToArr : MonoBehaviour
     private void Awake()
     {
         puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/ForSimplePuzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for simple puzzles
-        activePuzzle = Article.sightArticles[0];//Random.Range(0, Article.sightArticles.Count)]; // Getting active sight object
+        activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)]; // Getting active sight object
         
         //while (activePuzzle.Squared == true) // Checking if photo is square
         //{

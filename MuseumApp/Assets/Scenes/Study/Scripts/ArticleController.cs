@@ -27,7 +27,7 @@ public class ArticleController : MonoBehaviour
         nameText.text = Article.sightArticles[number].Name;
         descriptionText.text = Article.sightArticles[number].Description;
         locationText.text = Article.sightArticles[number].ExtraInf;
-        sightPhoto.GetComponent<Image>().sprite = Resources.Load<Sprite>(Article.sightArticles[number].PhotoPath);
+        sightPhoto.GetComponent<Image>().sprite = Resources.LoadAll<Sprite>(Article.sightArticles[number].PhotoPath)[9];
     }
 }
 

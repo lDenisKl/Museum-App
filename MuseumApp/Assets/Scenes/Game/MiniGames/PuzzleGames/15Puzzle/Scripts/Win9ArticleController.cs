@@ -15,11 +15,13 @@ public class Win9ArticleController : MonoBehaviour
         nameText = _nameText;
         descriptionText = _descriptionText;
         SetWinArticle(Article.sightArticles.IndexOf(AddPuzzles.activePuzzle));
+
     }
 
     public static void SetWinArticle(int number)
     {
         nameText.text = Article.sightArticles[number].Name;
         descriptionText.text = Article.sightArticles[number].Description;
+        descriptionText.text = descriptionText.text.Replace("NEWLINE", "\n\n").Replace("TAB", "\t");
     }
 }

@@ -18,5 +18,6 @@ public class DescriptionController : MonoBehaviour
     {
         nameText.text = Article.sightArticles[number].Name;
         descriptionText.text = Article.sightArticles[number].Description;
+        descriptionText.text = descriptionText.text.Replace("NEWLINE", "\n\n").Replace("TAB", "\t");
     }
 }
