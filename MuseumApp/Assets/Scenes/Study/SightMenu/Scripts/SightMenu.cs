@@ -10,8 +10,8 @@ public class SightMenu : MonoBehaviour
 
     private void Awake()
     {
-        int fileAmount = Article.sightArticles.Count;
-        for (int i = 0; i < fileAmount; i++)
+        int sightAmount = Article.sightArticles.Count;
+        for (int i = 0; i < sightAmount; i++)
         {
             var go = Instantiate(button, place, false);
             go.GetComponent<SightMenuButton>()._sightNumber = i+1;
