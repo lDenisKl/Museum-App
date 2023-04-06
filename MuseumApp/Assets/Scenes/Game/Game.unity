@@ -254,6 +254,8 @@ MonoBehaviour:
   - {fileID: 3431156981410507344, guid: 3ff632157f295144791da40712dc8fa9, type: 3}
   - {fileID: 8556179384282977098, guid: 1b5b7d56b60873b4baebdbf3aa246112, type: 3}
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
+  - {fileID: 8594043432467186280, guid: 828f0a913a73ecb44aaef6f2d4770544, type: 3}
+  - {fileID: 882069285913518362, guid: f587e4142f0f269438b1ff516a322953, type: 3}
   _prefabPlace: {fileID: 734713576}
 --- !u!114 &629706251
 MonoBehaviour:
