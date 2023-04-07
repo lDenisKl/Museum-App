@@ -1,41 +1,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PhotoQuizStart : MonoBehaviour
 {
-    public static Text questionText;
-    public Text _questionText;
-    public static Image[] answers;
-    public Image[] _answers;
+    private static int prevId;
+    public static GameObject ansImage;
+    public GameObject _ansImage;
+    public static TextMeshProUGUI questionText;
+    public TextMeshProUGUI _questionText;
+    public static GameObject[] answers;
+    public GameObject[] _answers;
+    public static int rightSightId;
 
     void Awake()
     {
+        ansImage = _ansImage;
         answers = _answers;
         questionText = _questionText;
         SetQuiz();
     }
-    private void SetQuiz()
+    public static void SetQuiz()
     {
         List<int> a = new List<int>();
-        int rightSightId = Random.Range(0, Article.sightArticles.Count);
+        rightSightId = Random.Range(0, Article.sightArticles.Count);
+        while (rightSightId == prevId)
+        {
+            rightSightId = Random.Range(0, Article.sightArticles.Count);
+        }
+        prevId = rightSightId;
         int rightImageId = Random.Range(0, 4);
         string question = Article.sightArticles[rightSightId].ExtraInf;
         questionText.text = question;
-        answers[rightImageId].sprite = (Sprite)Resources.LoadAll(Article.sightArticles[rightSightId].PhotoPath)[10];
-        for(int i = 0; i<4; i++)
+        answers[rightImageId].GetComponent<Image>().sprite = (Sprite)Resources.LoadAll(Article.sightArticles[rightSightId].PhotoPath)[10];
+        answers[rightImageId].GetComponent<QuizButton>().id = rightSightId;
+        a.Add(rightSightId);
+        for (int i = 0; i<4; i++)
         {
             if (i == rightImageId)
             {
                 continue;
             }
             int photoId = Random.Range(0, Article.sightArticles.Count);
-            while(a.Contains(photoId) || a.Contains(rightSightId))
+            while(a.Contains(photoId))
             {
                 photoId = Random.Range(0, Article.sightArticles.Count);
             }
-            answers[i].sprite = (Sprite)Resources.LoadAll(Article.sightArticles[photoId].PhotoPath)[10];
-            Debug.Log("set");
+            answers[i].GetComponent<Image>().sprite = (Sprite)Resources.LoadAll(Article.sightArticles[photoId].PhotoPath)[10];
+            answers[i].GetComponent<QuizButton>().id = photoId;
             a.Add(photoId);
         }
     }

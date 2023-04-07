@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scenes\MainScripts\LoadingDestroy.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuPrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Scripts\StudyPrefabChanger.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\QuizController.cs" />
     <Compile Include="Assets\Scenes\Study\Map\Scripts\DescriptionController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scenes\Study\Map\Scripts\SightButton.cs" />
@@ -79,16 +80,17 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\PuzzleController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\MapGame\Scripts\MapPuzzleController.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\QuizButton.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
     <Compile Include="Assets\DBManager.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Animations\AnimationController.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GamePrefabChanger.cs" />
     <Compile Include="Assets\Scenes\Study\SightMenu\Scripts\SightMenuButton.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\PhotoQuizStart.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\PhotoQuizStart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

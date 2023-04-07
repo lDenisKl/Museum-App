@@ -12,7 +12,7 @@ public class DBManager : MonoBehaviour
     void Start()
     {
         Article.sightArticles.Clear();
-        connectionString = "Data Source="+Application.streamingAssetsPath+"/sqlite(4).db";//"Data Source="+ Application.dataPath + "/sql.db";
+        connectionString = "Data Source="+Application.streamingAssetsPath+"/sqlite(5).db";//"Data Source="+ Application.dataPath + "/sql.db";
         Debug.Log(connectionString);
         GetSights();
     }

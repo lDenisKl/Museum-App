@@ -388,6 +388,8 @@
 "Assets/Scenes/Game/MiniGames/PuzzleGames/SimplePuzzle/Scripts/PuzzleController.cs"
 "Assets/Scenes/Game/MiniGames/PuzzleGames/SimplePuzzle/Scripts/WinArticleController.cs"
 "Assets/Scenes/Game/MiniGames/Quiz/Scripts/PhotoQuizStart.cs"
+"Assets/Scenes/Game/MiniGames/Quiz/Scripts/QuizButton.cs"
+"Assets/Scenes/Game/MiniGames/Quiz/Scripts/QuizController.cs"
 "Assets/Scenes/Game/Scripts/GameButtons.cs"
 "Assets/Scenes/Game/Scripts/GamePrefabChanger.cs"
 "Assets/Scenes/Game/Scripts/SceneStart.cs"
