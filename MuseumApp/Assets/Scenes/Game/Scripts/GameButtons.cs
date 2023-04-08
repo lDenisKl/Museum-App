@@ -14,6 +14,9 @@ public class GameButtons : MonoBehaviour
     {
         IsWin.solvedPuzzles = 0;
         IsMapWin.solvedMapPuzzles = 0;
+        PhotoQuizStart.a.Clear();
+        PhotoQuizStart.usedIds.Clear();
+
         DestroyAll();
         GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[number]);
     }
@@ -36,6 +39,13 @@ public class GameButtons : MonoBehaviour
         {
             DestroyAll();
             GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[3]);
+        }
+        else if (GameObject.Find("PhotoQuiz(Clone)"))
+        {
+            PhotoQuizStart.usedIds.Clear();
+            PhotoQuizStart.a.Clear();
+            DestroyAll();
+            GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[8]);
         }
         else
         {
