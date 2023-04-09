@@ -246,7 +246,6 @@ MonoBehaviour:
   - {fileID: 3431156981410507344, guid: 5a1ce8035b13e4142aeb2363770e4d04, type: 3}
   _mapPuzzlePrefabs:
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
-  - {fileID: 8594043432467186280, guid: d3aea776e65ba6b4d96638e8522130ea, type: 3}
   _allPrefabs:
   - {fileID: 8594043432467186280, guid: b398a96d5aa9cdd459ddd133539d2f03, type: 3}
   - {fileID: 8594043432467186280, guid: e5c0212576b33c64eb1a5d05e086be05, type: 3}
@@ -257,6 +256,7 @@ MonoBehaviour:
   - {fileID: 8594043432467186280, guid: e08076c76e838a24ca749d9ce9d1af25, type: 3}
   - {fileID: 8594043432467186280, guid: 828f0a913a73ecb44aaef6f2d4770544, type: 3}
   - {fileID: 882069285913518362, guid: f587e4142f0f269438b1ff516a322953, type: 3}
+  - {fileID: 882069285913518362, guid: 5eead2e02e1d66e49b78b71572f14e74, type: 3}
   _prefabPlace: {fileID: 734713576}
 --- !u!114 &629706251
 MonoBehaviour:

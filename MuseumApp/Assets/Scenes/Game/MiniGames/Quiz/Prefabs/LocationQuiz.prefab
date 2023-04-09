@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 882069285913518361}
   - component: {fileID: 882069285913518367}
   - component: {fileID: 882069285913518360}
+  - component: {fileID: 8517972257986610204}
   - component: {fileID: 7965160699819085560}
-  - component: {fileID: 568281558870023585}
   m_Layer: 5
   m_Name: LocationQuiz
   m_TagString: Untagged
@@ -82,6 +82,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8517972257986610204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882069285913518362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038833c6cc004ef4bb65562ddf121f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ansImage: {fileID: 7359160211558964268}
+  _questionImage: {fileID: 8022634718962034036}
+  _answersCount: {fileID: 5484482268991420375}
+  _lifesCount: {fileID: 7123213609324633221}
+  _answers:
+  - {fileID: 7259472673668295363}
+  - {fileID: 4970050547670795239}
+  - {fileID: 1073749647383198601}
+  - {fileID: 5170291773664510460}
 --- !u!114 &7965160699819085560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,27 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6deeca1d2741624098bf9efd6e7c99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &568281558870023585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882069285913518362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 442063e367c9f6449af63af8ad42582a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ansImage: {fileID: 7359160211558964268}
-  _questionText: {fileID: 0}
-  _answersCount: {fileID: 5484482268991420375}
-  _lifesCount: {fileID: 7123213609324633221}
-  _answers:
-  - {fileID: 8022634718962034036}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1009739501270208543
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 1025813304736668063}
   - component: {fileID: 4153341425667027723}
   - component: {fileID: 2180609721615603851}
+  - component: {fileID: 198402075724993806}
   - component: {fileID: 3332206676323883766}
   m_Layer: 5
   m_Name: Image (2)
@@ -326,6 +327,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &198402075724993806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073749647383198601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cdfcf3dee0b7043a6e7768880f56b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!114 &3332206676323883766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +383,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2180609721615603851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 198402075724993806}
+        m_TargetAssemblyTypeName: LocationQuizButtons, Assembly-CSharp
+        m_MethodName: ClickAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2574061303929831542}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1310369230318208972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1229,7 @@ GameObject:
   - component: {fileID: 5279583383567772735}
   - component: {fileID: 7403082033422850217}
   - component: {fileID: 3629195562381660418}
+  - component: {fileID: 7752614722420113479}
   - component: {fileID: 3648570399789297183}
   m_Layer: 5
   m_Name: Image (1)
@@ -1258,6 +1297,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7752614722420113479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970050547670795239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cdfcf3dee0b7043a6e7768880f56b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!114 &3648570399789297183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1353,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3629195562381660418}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7752614722420113479}
+        m_TargetAssemblyTypeName: LocationQuizButtons, Assembly-CSharp
+        m_MethodName: ClickAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2574061303929831542}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5170291773664510460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1389,7 @@ GameObject:
   - component: {fileID: 1738202062428509357}
   - component: {fileID: 4423402145171986593}
   - component: {fileID: 8934066139646401663}
+  - component: {fileID: 2563117797099366531}
   - component: {fileID: 1772266046867337590}
   m_Layer: 5
   m_Name: Image (3)
@@ -1380,6 +1457,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2563117797099366531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170291773664510460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cdfcf3dee0b7043a6e7768880f56b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!114 &1772266046867337590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1513,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8934066139646401663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2563117797099366531}
+        m_TargetAssemblyTypeName: LocationQuizButtons, Assembly-CSharp
+        m_MethodName: ClickAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2574061303929831542}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7259472673668295363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1549,7 @@ GameObject:
   - component: {fileID: 8537163932774312054}
   - component: {fileID: 6987805945032160213}
   - component: {fileID: 5735175082494256965}
+  - component: {fileID: 2232034067465708825}
   - component: {fileID: 5943108723329873321}
   m_Layer: 5
   m_Name: Image
@@ -1502,6 +1617,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2232034067465708825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259472673668295363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cdfcf3dee0b7043a6e7768880f56b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!114 &5943108723329873321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,7 +1673,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5735175082494256965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2232034067465708825}
+        m_TargetAssemblyTypeName: LocationQuizButtons, Assembly-CSharp
+        m_MethodName: ClickAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2574061303929831542}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7359160211558964268
 GameObject:
   m_ObjectHideFlags: 0

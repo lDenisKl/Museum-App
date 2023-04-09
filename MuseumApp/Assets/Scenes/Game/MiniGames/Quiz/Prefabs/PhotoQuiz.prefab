@@ -550,7 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  ansAnim: {fileID: 0}
 --- !u!114 &661505383123255579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  ansAnim: {fileID: 0}
 --- !u!114 &4154327561285924382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,7 +1197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  ansAnim: {fileID: 0}
 --- !u!114 &6403511657056438898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,7 +1572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  ansAnim: {fileID: 0}
 --- !u!114 &112439713077114475
 MonoBehaviour:
   m_ObjectHideFlags: 0

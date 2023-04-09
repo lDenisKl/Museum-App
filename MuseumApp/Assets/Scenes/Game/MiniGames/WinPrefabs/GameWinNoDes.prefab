@@ -457,7 +457,6 @@ GameObject:
   - component: {fileID: 3431156981410507343}
   - component: {fileID: 3431156981410507342}
   - component: {fileID: 3751650189389430401}
-  - component: {fileID: 5750487683257697653}
   m_Layer: 5
   m_Name: GameWinNoDes
   m_TagString: Untagged
@@ -537,20 +536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6deeca1d2741624098bf9efd6e7c99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5750487683257697653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3431156981410507344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960dcb448ab195146af1b41204b297bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nameText: {fileID: 0}
-  _descriptionText: {fileID: 0}
 --- !u!1 &3431156981446793609
 GameObject:
   m_ObjectHideFlags: 0

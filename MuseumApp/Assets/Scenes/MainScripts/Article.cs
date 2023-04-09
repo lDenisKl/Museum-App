@@ -7,7 +7,6 @@ public class Article // Class with sights' information
     public string Description; // Sight's description
     public string ExtraInf; // Sight's location
     public string PhotoPath; // Path for sight's photo
-    public bool   Squared; // Is photo - square (for puzzle logic)
     public Article(string name, string description, string extraInf, string photoPath)
     {
         this.Name = name;

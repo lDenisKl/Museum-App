@@ -24,7 +24,7 @@ public class GameButtons : MonoBehaviour
     public void MoveToMapPuzzle()
     {
         DestroyAll();
-        GamePrefabChanger.ChangePrefab(GamePrefabChanger.mapPuzzlePrefabs[Random.Range(0, 2)]);
+        GamePrefabChanger.ChangePrefab(GamePrefabChanger.mapPuzzlePrefabs[0]);
     }
     
     public void PlayAgain()
@@ -46,6 +46,13 @@ public class GameButtons : MonoBehaviour
             PhotoQuizStart.a.Clear();
             DestroyAll();
             GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[8]);
+        }
+        else if (GameObject.Find("LocationQuiz(Clone)"))
+        {
+           LocationQuizController.usedIds.Clear();
+            LocationQuizController.usedIdsOnce.Clear();
+            DestroyAll();
+            GamePrefabChanger.ChangePrefab(GamePrefabChanger.allPrefabs[9]);
         }
         else
         {

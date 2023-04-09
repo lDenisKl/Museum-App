@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scenes\Menu\Scripts\SettingsController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\PhotoScripts\QuizButton.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\15Puzzle\Scripts\AddPictureTip.cs" />
+    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\LocScripts\LocationQuizController.cs" />
     <Compile Include="Assets\DBManager.cs" />
     <Compile Include="Assets\Scenes\MainScripts\SceneChanger.cs" />
     <Compile Include="Assets\Scenes\Study\Animations\AnimationController.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Assets\Scenes\Game\MiniGames\PuzzleGames\SimplePuzzle\Scripts\AddPuzzlesToArr.cs" />
     <Compile Include="Assets\Scenes\Menu\Scripts\SceneStartMenu.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\GameButtons.cs" />
-    <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\LocScripts\LocationQuizController.cs" />
     <Compile Include="Assets\Scenes\Game\MiniGames\Quiz\Scripts\LocScripts\LocationQuizButtons.cs" />
   </ItemGroup>
   <ItemGroup>

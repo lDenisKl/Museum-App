@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class QuizButton : MonoBehaviour
 {
     public int id;
-    public AnimationClip ansAnim;
     public void ClickAnswer()
     {
         if (id == PhotoQuizStart.rightSightId)

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AddPuzzlesToArr : MonoBehaviour
 {
+    private static int prevId;
     [Header("Array for solved forms")]
     public GameObject[] puzzlePiecessolved;
 
@@ -16,14 +17,21 @@ public class AddPuzzlesToArr : MonoBehaviour
     private static Sprite[] puzzlePiecesSprites = new Sprite[9];
 
     public static Article activePuzzle;
-    public int puzzlePhotosAmount;
+    //public int puzzlePhotosAmount;
    
 
     private void Awake()
     {
-        puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/ForSimplePuzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for simple puzzles
-        activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)]; // Getting active sight object
+        //puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/ForSimplePuzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for simple puzzles
+        int puzzId = Random.Range(0, Article.sightArticles.Count);
         
+        activePuzzle = Article.sightArticles[puzzId]; // Getting active sight object
+        while (activePuzzle.PhotoPath.Contains("9") || puzzId == prevId)
+        {
+            puzzId = Random.Range(0, Article.sightArticles.Count);
+            activePuzzle = Article.sightArticles[puzzId];
+        }
+        prevId = puzzId;
         //while (activePuzzle.Squared == true) // Checking if photo is square
         //{
         //    activePuzzle = Article.sightArticles[Random.Range(0, Article.sightArticles.Count)];

@@ -29,6 +29,7 @@ public class AddPuzzles : MonoBehaviour
     public static Article activePuzzle;
     public static int puzzlePhotosAmount;
     private int[] gg = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 0}; // Indexes for pictures
+    private static int prevId;
 
 
     private void Awake()
@@ -37,13 +38,20 @@ public class AddPuzzles : MonoBehaviour
         puzzleButtons = _puzzleButtons;
         puzzleButtonsSolved = puzzleButtons;
 
-        puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/For9Puzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for 9Puzzle
+
+        //puzzlePhotosAmount = (new DirectoryInfo("Assets/Resources/For9Puzzles").GetFiles("*.jpg")).Length; // Getting amount of pictures for 9Puzzle
         winAudio = Resources.Load("Sounds/Games/WinAudio") as AudioClip;    // Geting win audioclip from Resources folder
-        activePuzzle = Article.sightArticles[UnityEngine.Random.Range(0, Article.sightArticles.Count)];
-        if (activePuzzle.Squared == false)
+
+        int puzzId = UnityEngine.Random.Range(0, Article.sightArticles.Count);
+
+        activePuzzle = Article.sightArticles[puzzId]; // Getting active sight object
+        while (activePuzzle.PhotoPath.Contains("Simple") || puzzId == prevId)
         {
-            activePuzzle = Article.sightArticles[UnityEngine.Random.Range(0, Article.sightArticles.Count)];
+            puzzId = UnityEngine.Random.Range(0, Article.sightArticles.Count);
+            activePuzzle = Article.sightArticles[puzzId];
         }
+        prevId = puzzId;
+
         puzzlePiecesSprites = Resources.LoadAll<Sprite>(activePuzzle.PhotoPath); // Getting pieces
 
         int[] newArr = new int[9];
