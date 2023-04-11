@@ -39,7 +39,6 @@ public class PhotoQuizStart : MonoBehaviour
     public static void SetQuiz()
     {
         a.Clear();
-        Debug.Log("inSet");
         rightSightId = Random.Range(0, Article.sightArticles.Count);
         while (usedIds.Contains(rightSightId))
         {

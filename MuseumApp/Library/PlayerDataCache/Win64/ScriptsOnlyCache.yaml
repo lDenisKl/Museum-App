@@ -13,6 +13,8 @@ ScriptsOnlyBuild:
     - GamePrefabChanger
     - IsMapWin
     - LoadingDestroy
+    - LocationQuizButtons
+    - LocationQuizController
     - MapPuzzleController
     - MenuButtons
     - MenuPrefabChanger
@@ -181,6 +183,30 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Animator
     methodName: SetTrigger
   - assembly: Assembly-CSharp
+    fullTypeName: LocationQuizButtons
+    methodName: ClickAnswer
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LocationQuizButtons
+    methodName: ClickAnswer
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LocationQuizButtons
+    methodName: ClickAnswer
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LocationQuizButtons
+    methodName: ClickAnswer
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: SetTrigger
+  - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: PlayAgain
   - assembly: Assembly-CSharp
@@ -201,6 +227,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: PlayAgain
+  - assembly: Assembly-CSharp
+    fullTypeName: GameButtons
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: GameButtons
     methodName: MoveToAnotherPrefab
@@ -257,10 +286,10 @@ ScriptsOnlyBuild:
     methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToSights
+    methodName: MoveToAnotherPrefabNoDestr
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: Hide
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToAnotherPrefab
@@ -272,10 +301,10 @@ ScriptsOnlyBuild:
     methodName: MoveToMenu
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefabNoDestr
+    methodName: MoveToSights
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefab
+    methodName: Hide
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: ToDescrp
@@ -386,29 +415,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4782}
     - Class: 114
-      Script: {instanceID: 5596}
+      Script: {instanceID: 5594}
     - Class: 114
-      Script: {instanceID: 5934}
+      Script: {instanceID: 5932}
     - Class: 114
-      Script: {instanceID: 5938}
+      Script: {instanceID: 5936}
     - Class: 114
-      Script: {instanceID: 6032}
+      Script: {instanceID: 6030}
     - Class: 114
-      Script: {instanceID: 6220}
+      Script: {instanceID: 6218}
     - Class: 114
-      Script: {instanceID: 6268}
+      Script: {instanceID: 6266}
     - Class: 114
-      Script: {instanceID: 6384}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6560}
+      Script: {instanceID: 6558}
     - Class: 114
-      Script: {instanceID: 6778}
+      Script: {instanceID: 6776}
     - Class: 114
-      Script: {instanceID: 6980}
+      Script: {instanceID: 6978}
     - Class: 114
-      Script: {instanceID: 7084}
+      Script: {instanceID: 7082}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7394}
+    - Class: 114
+      Script: {instanceID: 7548}
     - Class: 114
       Script: {instanceID: 7708}
     - Class: 114
@@ -421,6 +452,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8732}
     - Class: 114
       Script: {instanceID: 9468}
+    - Class: 114
+      Script: {instanceID: 9704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -481,21 +514,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 5550}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5922}
+      Script: {instanceID: 5920}
     - Class: 114
-      Script: {instanceID: 6032}
+      Script: {instanceID: 6030}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 6308}
     - Class: 114
-      Script: {instanceID: 6384}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6778}
+      Script: {instanceID: 6776}
     - Class: 114
-      Script: {instanceID: 6980}
+      Script: {instanceID: 6978}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7394}
     - Class: 114
       Script: {instanceID: 7702}
     - Class: 114
@@ -568,21 +601,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 5460}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 5716}
+      Script: {instanceID: 5714}
     - Class: 114
-      Script: {instanceID: 6032}
+      Script: {instanceID: 6030}
     - Class: 114
-      Script: {instanceID: 6384}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6778}
+      Script: {instanceID: 6776}
     - Class: 114
-      Script: {instanceID: 6980}
+      Script: {instanceID: 6978}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7394}
     - Class: 114
-      Script: {instanceID: 7408}
+      Script: {instanceID: 7406}
     - Class: 114
       Script: {instanceID: 7708}
     - Class: 114
@@ -1163,12 +1196,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: QuizController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
@@ -1354,7 +1381,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: dbe253e4fac1643c2200d3381ffc094e
+      Hash: 2ecdbe75f54c8965e9d317f6c9a2e0e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuizButton
@@ -1442,6 +1469,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: 0856a3c5bd517c6e1c960f5ff5f7f17d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocationQuizController
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -1606,7 +1639,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 815a4c6a4863b8d89d56c668eb6893a5
+      Hash: bdd09a028e440b6ac97921aa5fdbbef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PhotoQuizStart
@@ -1630,7 +1663,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 8bd6600b496dcdb5b59c90678481da56
+      Hash: 915e027f77e0e6e065ce0e008feb76d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddPuzzlesToArr
@@ -1732,6 +1765,12 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
+      Hash: 2ecdbe75f54c8965e9d317f6c9a2e0e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocationQuizButtons
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1741,5 +1780,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu/Menu.unity
   - Assets/Scenes/Game/Game.unity
   - Assets/Scenes/Study/Study.unity
-  playerPath: "C:/Users/user/Desktop/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438
+  playerPath: "C:/Users/user/Desktop/0.0.3v/\u041F\u0430\u043C\u044F\u0442\u043D\u0438\u043A\u0438
     \u0423\u0445\u0442\u044B.exe"
