@@ -14,6 +14,8 @@ public class LocationQuizController : MonoBehaviour
     public GameObject _ansImage;
     public static GameObject questionImage;
     public GameObject _questionImage;
+    public static Text questionText;
+    public Text _questionText;
     public static Text answersCount;
     public Text _answersCount;
     public static Text lifesCount;
@@ -28,6 +30,7 @@ public class LocationQuizController : MonoBehaviour
         lifes = 3;
         lifesCount = _lifesCount;
         answersCount = _answersCount;
+        questionText = _questionText;
         answersCount.text = "0/10";
         lifesCount.text = "3";
         answers = _answers;
@@ -48,7 +51,9 @@ public class LocationQuizController : MonoBehaviour
         usedIdsOnce.Add(rightSightId);
         rightLocationId = Random.Range(0, 4);
         questionImage.GetComponent<Image>().sprite = Resources.LoadAll<Sprite>(Article.sightArticles[rightSightId].PhotoPath)[9];
+        questionText.text = Article.sightArticles[rightSightId].Name;
         answers[rightLocationId].GetComponentInChildren<TextMeshProUGUI>().text = Article.sightArticles[rightSightId].ExtraInf;
+        answers[rightLocationId].GetComponent<Button>().enabled = true;
         answers[rightLocationId].GetComponent<LocationQuizButtons>().id = rightSightId;
         for (int i = 0; i < 4; i++)
         {

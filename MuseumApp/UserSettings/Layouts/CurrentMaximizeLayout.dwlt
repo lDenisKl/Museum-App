@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 275.2
     height: 474.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 449f0000
-      m_LastClickedID: 40772
-      m_ExpandedIDs: 9696ffffa496ffffde9e0000f29e0000f49e0000029f0000
+      m_SelectedIDs: e8250000
+      m_LastClickedID: 0
+      m_ExpandedIDs: bacefeffd0cefeff92ed000098ed0000c0ed0000d0ed0000e2ed0000f6ed000002ee000016ee0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -527,9 +527,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 981.37695, y: 682.91833, z: 4.3522058}
+    m_Target: {x: 1096.0411, y: 495.3563, z: 7.8675714}
     speed: 2
-    m_Value: {x: 981.37695, y: 682.91833, z: 4.3522058}
+    m_Value: {x: 1096.0411, y: 495.3563, z: 7.8675714}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
     showImageEffects: 1
     showParticleSystems: 1
     showVisualEffectGraphs: 1
-    m_FxEnabled: 1
+    m_FxEnabled: 0
   m_Grid:
     xGrid:
       m_Fade:
@@ -580,9 +580,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 584.97
+    m_Target: 764.1434
     speed: 2
-    m_Value: 584.97
+    m_Value: 764.1434
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -740,22 +740,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Game/MiniGames/Quiz/Prefabs
+    - Assets/Scenes/Game/MiniGames/Quiz/Scripts/LocScripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Game/MiniGames/Quiz/Prefabs
+  - Assets/Scenes/Game/MiniGames/Quiz/Scripts/LocScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\GitHub\Museum App\MuseumApp
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 124.600006}
-    m_SelectedIDs: 6a790000
-    m_LastClickedID: 31082
-    m_ExpandedIDs: 0000000090670000a4690000ae690000d4690000ec85000000ca9a3b
+    scrollPos: {x: 0, y: 108.600006}
+    m_SelectedIDs: ca780000
+    m_LastClickedID: 30922
+    m_ExpandedIDs: 000000009467000098690000a0690000a2690000a4690000ae690000ba69000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -783,7 +783,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009067000000ca9a3b
+    m_ExpandedIDs: 000000009467000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -808,9 +808,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 449f0000
-    m_LastClickedInstanceID: 40772
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: e8250000
+    m_LastClickedInstanceID: 9704
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f4970000906300007ea50000b8600000000000001e6a00007a630000966400000e6400007ca3000066740000c8630000246400009a690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -897,7 +897,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 40772
+  m_LastSelectedObjectID: 60930
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -917,8 +917,8 @@ MonoBehaviour:
     y: 0
     width: 464
     height: 730.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}

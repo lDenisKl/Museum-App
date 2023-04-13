@@ -2,13 +2,14 @@ using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Win9ArticleController : MonoBehaviour
 {
     public static Text nameText;
     [SerializeField] private Text _nameText;
-    public static Text descriptionText;
-    [SerializeField] private Text _descriptionText;
+    public static TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI _descriptionText;
 
     private void Awake()
     {
