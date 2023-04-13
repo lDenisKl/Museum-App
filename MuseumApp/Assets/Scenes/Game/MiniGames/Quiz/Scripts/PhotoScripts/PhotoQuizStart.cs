@@ -50,6 +50,8 @@ public class PhotoQuizStart : MonoBehaviour
         question = Article.sightArticles[rightSightId].ExtraInf;
         questionText.text = question;
         answers[rightImageId].GetComponent<Image>().sprite = (Sprite)Resources.LoadAll(Article.sightArticles[rightSightId].PhotoPath)[10];
+        answers[rightImageId].GetComponent<Image>().color = Color.white;
+        answers[rightImageId].GetComponent<Button>().enabled = true;
         answers[rightImageId].GetComponent<QuizButton>().id = rightSightId;
         for (int i = 0; i<4; i++)
         {
