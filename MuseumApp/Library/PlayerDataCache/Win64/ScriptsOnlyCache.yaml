@@ -38,6 +38,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
@@ -64,8 +65,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -286,10 +289,10 @@ ScriptsOnlyBuild:
     methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefabNoDestr
+    methodName: MoveToSights
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToAnotherPrefab
+    methodName: Hide
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: MoveToAnotherPrefab
@@ -301,10 +304,10 @@ ScriptsOnlyBuild:
     methodName: MoveToMenu
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: MoveToSights
+    methodName: MoveToAnotherPrefabNoDestr
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
-    methodName: Hide
+    methodName: MoveToAnotherPrefab
   - assembly: Assembly-CSharp
     fullTypeName: StudyButtons
     methodName: ToDescrp
@@ -835,7 +838,7 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
-      Hash: b23b5d4d7e075c4816981ed19156511f
+      Hash: c632c0e56ba40411ff531d819f01dd34
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WinArticleController
@@ -907,7 +910,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: b23b5d4d7e075c4816981ed19156511f
+      Hash: c632c0e56ba40411ff531d819f01dd34
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Win9ArticleController
@@ -1207,7 +1210,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: b23b5d4d7e075c4816981ed19156511f
+      Hash: c632c0e56ba40411ff531d819f01dd34
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DescriptionController
@@ -1471,7 +1474,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 0856a3c5bd517c6e1c960f5ff5f7f17d
+      Hash: 3fef43105339e7b773d2123991f5e166
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LocationQuizController
