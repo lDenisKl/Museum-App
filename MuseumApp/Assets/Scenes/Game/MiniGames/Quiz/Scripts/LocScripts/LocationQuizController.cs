@@ -52,7 +52,7 @@ public class LocationQuizController : MonoBehaviour
         rightLocationId = Random.Range(0, 4);
         questionImage.GetComponent<Image>().sprite = Resources.LoadAll<Sprite>(Article.sightArticles[rightSightId].PhotoPath)[9];
         questionText.text = Article.sightArticles[rightSightId].Name;
-        answers[rightLocationId].GetComponentInChildren<TextMeshProUGUI>().text = Article.sightArticles[rightSightId].ExtraInf;
+        answers[rightLocationId].GetComponentInChildren<TextMeshProUGUI>().text = Article.sightArticles[rightSightId].ExtraInf.Replace("Расположение:", "");
         answers[rightLocationId].GetComponent<Button>().enabled = true;
         answers[rightLocationId].GetComponent<LocationQuizButtons>().id = rightSightId;
         for (int i = 0; i < 4; i++)
@@ -68,7 +68,7 @@ public class LocationQuizController : MonoBehaviour
                 answerId = Random.Range(0, Article.sightArticles.Count);
             }
             TextMeshProUGUI s = answers[i].GetComponentInChildren<TextMeshProUGUI>();
-            s.text = Article.sightArticles[answerId].ExtraInf;
+            s.text = Article.sightArticles[answerId].ExtraInf.Replace("Расположение:", "");
             answers[i].GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
             answers[i].GetComponent<Button>().enabled = true;
             answers[i].GetComponent<LocationQuizButtons>().id = answerId;
