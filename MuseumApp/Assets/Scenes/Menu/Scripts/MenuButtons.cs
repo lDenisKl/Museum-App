@@ -1,7 +1,19 @@
+using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 public class MenuButtons : MonoBehaviour
 {
+    private const string _connectionProperties = "server=rc1b-n4kvp3yklxkjhnvz.mdb.yandexcloud.net;port=3306;user=Kvantorianec;database=SmartBusinessDB;password=uzer1pass;CharSet=utf8";
+    public static List<string> lol = new List<string>();
+    private void Awake()
+    {
+        lol.Append("out");
+        lol.Append("in");
+    }
     public static void DestroyAll() // Method for destroying all objects on the scene
     {
         for (int i = 0; i < MenuPrefabChanger.prefabPlace.transform.childCount; i++)
@@ -10,6 +22,25 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
+    public static void Time()
+    {
+        lol.Add("out");
+        lol.Add("in");
+        MySqlConnection _connection = new MySqlConnection(_connectionProperties);
+        for (int j = 11; j < 26; j++)
+        {
+            for (int i = 7; i < 23; i+=2)
+            {
+                _connection.Open();
+                string g = $"INSERT INTO machineWorkPull(idMachine, dateStart, dateEnd, state) VALUES(\"26\", \"2023-05-{j}T{i}:{Random.Range(1, 55)}:18\", \"2023-05-{j}T{i+1}:{Random.Range(1,55)}:32\", \"var\")";
+                var command1 = new MySqlCommand(g, _connection);
+                var read11 = command1.ExecuteReader();
+                _connection.Close();
+                
+            }
+        }
+        
+    }
     public void MoveToPlay() // Move to Play scene
     {
         MenuPrefabChanger.ChangePrefab(MenuPrefabChanger.allPrefabs[0]);

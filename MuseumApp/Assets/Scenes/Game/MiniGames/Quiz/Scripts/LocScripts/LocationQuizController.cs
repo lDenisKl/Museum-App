@@ -41,7 +41,6 @@ public class LocationQuizController : MonoBehaviour
     public static void SetQuiz()
     {
         usedIdsOnce.Clear();
-        Debug.Log("inSet");
         rightSightId = Random.Range(0, Article.sightArticles.Count);
         while (usedIds.Contains(rightSightId))
         {
@@ -68,7 +67,7 @@ public class LocationQuizController : MonoBehaviour
                 answerId = Random.Range(0, Article.sightArticles.Count);
             }
             TextMeshProUGUI s = answers[i].GetComponentInChildren<TextMeshProUGUI>();
-            s.text = Article.sightArticles[answerId].ExtraInf.Replace("Расположение:", "");
+            s.text = Article.sightArticles[answerId].ExtraInf.Replace("Расположение: ", "");
             answers[i].GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
             answers[i].GetComponent<Button>().enabled = true;
             answers[i].GetComponent<LocationQuizButtons>().id = answerId;

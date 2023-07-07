@@ -37,7 +37,13 @@ public class StudyButtons : MonoBehaviour
     public void Hide() // Close sight menu
     {
         AnimationController.HideMenu();
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.5f);
+    }
+
+    public void OpenSightMap(int number)
+    {
+        SightMapController.SightMap.SetActive(true);
+        Instantiate(Article.sightMaps[number], SightMapController.PrefabPlace);
     }
 
     public void HideDescription() // Close sight description

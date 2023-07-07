@@ -1264,7 +1264,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2063221734237680866}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: Time
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
