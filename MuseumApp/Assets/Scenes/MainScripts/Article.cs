@@ -9,11 +9,13 @@ public class Article // Class with sights' information
     public string Description; // Sight's description
     public string ExtraInf; // Sight's location
     public string PhotoPath; // Path for sight's photo
-    public Article(string name, string description, string extraInf, string photoPath)
+    public string MapPath; // Path for map's image
+    public Article(string name, string description, string extraInf, string photoPath, string mapPath)
     {
-        this.Name = name;
-        this.Description = description;
-        this.ExtraInf = extraInf;
-        this.PhotoPath = photoPath;
+        Name = name;
+        Description = description;
+        ExtraInf = extraInf;
+        PhotoPath = photoPath;
+        MapPath = mapPath;
     }
 }

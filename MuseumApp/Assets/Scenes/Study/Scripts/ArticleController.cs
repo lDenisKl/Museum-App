@@ -12,6 +12,8 @@ public class ArticleController : MonoBehaviour
     [SerializeField] private Text _locationText;
     public static GameObject sightPhoto;
     [SerializeField] private GameObject _sightPhoto;
+    public static Image MapImage;
+    [SerializeField] private Image mapImage;
 
 
     private void Awake()
@@ -20,6 +22,7 @@ public class ArticleController : MonoBehaviour
         descriptionText = _descriptionText;
         locationText = _locationText;
         sightPhoto = _sightPhoto;
+        MapImage = mapImage;
     }
 
     public static void SetArticle(int number)

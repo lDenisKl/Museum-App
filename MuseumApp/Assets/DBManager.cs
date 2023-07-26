@@ -12,7 +12,7 @@ public class DBManager : MonoBehaviour
     void Start()
     {
         Article.sightArticles.Clear();
-        connectionString = "Data Source="+Application.streamingAssetsPath+"/sqlite(1).db";//"Data Source="+ Application.dataPath + "/sql.db";
+        connectionString = "Data Source="+Application.streamingAssetsPath+"/sqlite(4).db";//"Data Source="+ Application.dataPath + "/sql.db";
         Debug.Log(connectionString);
         GetSights();
     }
@@ -49,7 +49,7 @@ public class DBManager : MonoBehaviour
                 {
                     while (reader.Read())
                     {
-                        Article.sightArticles.Add(new Article(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                        Article.sightArticles.Add(new Article(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5)));
                     }
                     dbConnection.Close();
                     reader.Close();

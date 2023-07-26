@@ -1,3 +1,4 @@
+using MySql.Data.MySqlClient.Authentication;
 using UnityEngine;
 
 public class StudyButtons : MonoBehaviour
@@ -40,11 +41,6 @@ public class StudyButtons : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
-    public void OpenSightMap(int number)
-    {
-        SightMapController.SightMap.SetActive(true);
-        Instantiate(Article.sightMaps[number], SightMapController.PrefabPlace);
-    }
 
     public void HideDescription() // Close sight description
     {
@@ -55,9 +51,10 @@ public class StudyButtons : MonoBehaviour
     public void MoveToSights() // Set article prefab
     {
         DestroyAll();
+        int sightNumber = gameObject.GetComponent<SightMenuButton>()._sightNumber - 1;
         StudyPrefabChanger.ChangePrefab(StudyPrefabChanger.articlePrefab);
-        ArticleController.SetArticle(gameObject.GetComponent<SightMenuButton>()._sightNumber-1);
-
+        ArticleController.SetArticle(sightNumber);
+        ArticleMap.InitializeMap(sightNumber);
         ArticleController.descriptionText.text = ArticleController.descriptionText.text.Replace("NEWLINE","\n\n").Replace("TAB","\t");
     }
 }
